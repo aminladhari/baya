@@ -10,3 +10,7 @@ C:\Users\Amine\Desktop\baya\baya\bin\Debug\MetroFramework.Design.dll
 C:\Users\Amine\Desktop\baya\baya\bin\Debug\MetroFramework.dll
 C:\Users\Amine\Desktop\baya\baya\bin\Debug\MetroFramework.Fonts.dll
 C:\Users\Amine\Desktop\baya\baya\obj\Debug\baya.csprojResolveAssemblyReference.cache
+C:\Users\Amine\Desktop\baya\baya\obj\Debug\baya.Authentification.resources
+C:\Users\Amine\Desktop\baya\baya\bin\Debug\MySql.Data.dll
+C:\Users\Amine\Desktop\baya\baya\bin\Debug\MySql.Data.xml
+C:\Users\Amine\Desktop\baya\baya\obj\Debug\baya.Acceuil.resources

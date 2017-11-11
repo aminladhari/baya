@@ -20,7 +20,21 @@ namespace baya
 
         private void Chargement_Load(object sender, EventArgs e)
         {
+            timer1.Start();
+        }
 
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            metroProgressBar1.Increment(2);
+            if (metroProgressBar1.Value == metroProgressBar1.Maximum)
+            {
+
+                timer1.Stop();
+                this.Hide();
+                Authentification ac = new Authentification();
+                ac.Show();
+
+            }
         }
     }
 }

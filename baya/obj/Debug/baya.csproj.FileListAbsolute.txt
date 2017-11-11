@@ -1,0 +1,12 @@
+C:\Users\Amine\Desktop\baya\baya\bin\Debug\baya.exe.config
+C:\Users\Amine\Desktop\baya\baya\bin\Debug\baya.exe
+C:\Users\Amine\Desktop\baya\baya\bin\Debug\baya.pdb
+C:\Users\Amine\Desktop\baya\baya\obj\Debug\baya.Properties.Resources.resources
+C:\Users\Amine\Desktop\baya\baya\obj\Debug\baya.csproj.GenerateResource.Cache
+C:\Users\Amine\Desktop\baya\baya\obj\Debug\baya.exe
+C:\Users\Amine\Desktop\baya\baya\obj\Debug\baya.pdb
+C:\Users\Amine\Desktop\baya\baya\obj\Debug\baya.Chargement.resources
+C:\Users\Amine\Desktop\baya\baya\bin\Debug\MetroFramework.Design.dll
+C:\Users\Amine\Desktop\baya\baya\bin\Debug\MetroFramework.dll
+C:\Users\Amine\Desktop\baya\baya\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\Amine\Desktop\baya\baya\obj\Debug\baya.csprojResolveAssemblyReference.cache

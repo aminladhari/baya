@@ -77,6 +77,7 @@
     <Compile Include="Chargement.Designer.cs">
       <DependentUpon>Chargement.cs</DependentUpon>
     </Compile>
+    <Compile Include="Chargementfichier.cs" />
     <Compile Include="Connexion.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

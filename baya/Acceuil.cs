@@ -1,15 +1,9 @@
-﻿using MetroFramework.Forms;
+﻿using MetroFramework;
+using MetroFramework.Forms;
 using MySql.Data.MySqlClient;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-
 namespace baya
 {
     public partial class Acceuil : MetroForm
@@ -21,7 +15,9 @@ namespace baya
         public Acceuil()
         {
             InitializeComponent();
-            
+            this.BorderStyle = MetroFormBorderStyle.FixedSingle;
+            this.ShadowType = MetroFormShadowType.AeroShadow;
+
         }
        
 
@@ -30,6 +26,21 @@ namespace baya
             x.ChargementComboBox("select valeur from tva",combo_tva);
             y.ChargementComboBox("select valeur from epaisseur", combo_epai);
             z.ChargementComboBox("select type from typemarbre", type);
+            chargementgrid();
+        }
+        private void chargementgrid()
+        {
+            //chargement de datagridview
+
+            Connexion.cmd.CommandText = "Select * from marbre ";
+            MySqlDataAdapter da = new MySqlDataAdapter(Connexion.cmd);
+            DataSet ds = new DataSet();
+            da.Fill(ds, "marbre");
+            System.Data.DataTable dt = new System.Data.DataTable();
+            dt = ds.Tables["marbre"];
+            metroGrid1.DataSource = dt;
+            Connexion.cnx.Close();
+
         }
 
         private void metroGrid1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -56,5 +67,7 @@ namespace baya
         {
 
         }
+
+       
     }
 }

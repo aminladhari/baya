@@ -13,6 +13,7 @@ namespace baya
         public void ChargementComboBox(string requete, ComboBox combo)
         {
             combo.Items.Clear();
+            Connexion.cnx.Close();
             Connexion.cnx.Open();
             Connexion.cmd.CommandText = requete;
             MySqlDataReader lire = Connexion.cmd.ExecuteReader();

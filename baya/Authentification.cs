@@ -17,6 +17,8 @@ namespace baya
         public Authentification()
         {
             InitializeComponent();
+            this.BorderStyle = MetroFormBorderStyle.FixedSingle;
+            this.ShadowType = MetroFormShadowType.AeroShadow;
         }
 
         private void Authentification_Load(object sender, EventArgs e)

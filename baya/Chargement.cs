@@ -16,6 +16,8 @@ namespace baya
         public Chargement()
         {
             InitializeComponent();
+            this.BorderStyle = MetroFormBorderStyle.FixedSingle;
+            this.ShadowType = MetroFormShadowType.AeroShadow;
         }
 
         private void Chargement_Load(object sender, EventArgs e)

@@ -42,10 +42,10 @@ namespace baya
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.gestionMarbreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestionGranitToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.gestionDesClientsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.quiterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestionMarbreToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.gestionDesClientsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.quiterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.suiviCommandeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -130,6 +130,7 @@ namespace baya
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Cordonnées Commande";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // combo_epai
             // 
@@ -206,6 +207,12 @@ namespace baya
             this.gestionGranitToolStripMenuItem1.Size = new System.Drawing.Size(172, 22);
             this.gestionGranitToolStripMenuItem1.Text = "Gestion Granit";
             // 
+            // gestionMarbreToolStripMenuItem1
+            // 
+            this.gestionMarbreToolStripMenuItem1.Name = "gestionMarbreToolStripMenuItem1";
+            this.gestionMarbreToolStripMenuItem1.Size = new System.Drawing.Size(172, 22);
+            this.gestionMarbreToolStripMenuItem1.Text = "Gestion Marbre";
+            // 
             // gestionDesClientsToolStripMenuItem
             // 
             this.gestionDesClientsToolStripMenuItem.Name = "gestionDesClientsToolStripMenuItem";
@@ -213,23 +220,17 @@ namespace baya
             this.gestionDesClientsToolStripMenuItem.Text = "Gestion des clients";
             this.gestionDesClientsToolStripMenuItem.Click += new System.EventHandler(this.gestionDesClientsToolStripMenuItem_Click);
             // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(169, 6);
+            // 
             // quiterToolStripMenuItem
             // 
             this.quiterToolStripMenuItem.Name = "quiterToolStripMenuItem";
             this.quiterToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
             this.quiterToolStripMenuItem.Text = "Quiter";
             this.quiterToolStripMenuItem.Click += new System.EventHandler(this.quiterToolStripMenuItem_Click);
-            // 
-            // gestionMarbreToolStripMenuItem1
-            // 
-            this.gestionMarbreToolStripMenuItem1.Name = "gestionMarbreToolStripMenuItem1";
-            this.gestionMarbreToolStripMenuItem1.Size = new System.Drawing.Size(172, 22);
-            this.gestionMarbreToolStripMenuItem1.Text = "Gestion Marbre";
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(169, 6);
             // 
             // suiviCommandeToolStripMenuItem
             // 

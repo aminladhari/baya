@@ -46,10 +46,10 @@
             this.gestionMarbreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestionGranitToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.gestionMarbreToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.gestionDesClientsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.quiterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.suiviCommandeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.metroButton1 = new MetroFramework.Controls.MetroButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -184,6 +184,7 @@
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(707, 185);
             this.dataGridView1.TabIndex = 4;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // metroLabel1
             // 
@@ -232,6 +233,7 @@
             this.btn_add.Text = "Ajouter";
             this.btn_add.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn_add.UseSelectable = true;
+            this.btn_add.Click += new System.EventHandler(this.btn_add_Click);
             // 
             // btn_update
             // 
@@ -257,6 +259,7 @@
             this.btn_delete.Text = "Supprimer";
             this.btn_delete.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn_delete.UseSelectable = true;
+            this.btn_delete.Click += new System.EventHandler(this.btn_delete_Click);
             // 
             // menuStrip1
             // 
@@ -284,7 +287,6 @@
             this.gestionMarbreToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.gestionGranitToolStripMenuItem1,
             this.gestionMarbreToolStripMenuItem1,
-            this.gestionDesClientsToolStripMenuItem,
             this.toolStripSeparator1,
             this.quiterToolStripMenuItem});
             this.gestionMarbreToolStripMenuItem.Name = "gestionMarbreToolStripMenuItem";
@@ -294,31 +296,26 @@
             // gestionGranitToolStripMenuItem1
             // 
             this.gestionGranitToolStripMenuItem1.Name = "gestionGranitToolStripMenuItem1";
-            this.gestionGranitToolStripMenuItem1.Size = new System.Drawing.Size(172, 22);
+            this.gestionGranitToolStripMenuItem1.Size = new System.Drawing.Size(155, 22);
             this.gestionGranitToolStripMenuItem1.Text = "Gestion Granit";
             // 
             // gestionMarbreToolStripMenuItem1
             // 
             this.gestionMarbreToolStripMenuItem1.Name = "gestionMarbreToolStripMenuItem1";
-            this.gestionMarbreToolStripMenuItem1.Size = new System.Drawing.Size(172, 22);
+            this.gestionMarbreToolStripMenuItem1.Size = new System.Drawing.Size(155, 22);
             this.gestionMarbreToolStripMenuItem1.Text = "Gestion Marbre";
-            // 
-            // gestionDesClientsToolStripMenuItem
-            // 
-            this.gestionDesClientsToolStripMenuItem.Name = "gestionDesClientsToolStripMenuItem";
-            this.gestionDesClientsToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
-            this.gestionDesClientsToolStripMenuItem.Text = "Gestion des clients";
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(169, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(152, 6);
             // 
             // quiterToolStripMenuItem
             // 
             this.quiterToolStripMenuItem.Name = "quiterToolStripMenuItem";
-            this.quiterToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.quiterToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
             this.quiterToolStripMenuItem.Text = "Quiter";
+            this.quiterToolStripMenuItem.Click += new System.EventHandler(this.quiterToolStripMenuItem_Click);
             // 
             // suiviCommandeToolStripMenuItem
             // 
@@ -326,11 +323,22 @@
             this.suiviCommandeToolStripMenuItem.Size = new System.Drawing.Size(110, 20);
             this.suiviCommandeToolStripMenuItem.Text = "Suivi Commande";
             // 
+            // metroButton1
+            // 
+            this.metroButton1.Location = new System.Drawing.Point(555, 235);
+            this.metroButton1.Name = "metroButton1";
+            this.metroButton1.Size = new System.Drawing.Size(119, 23);
+            this.metroButton1.TabIndex = 13;
+            this.metroButton1.Text = "Vider les champs";
+            this.metroButton1.UseSelectable = true;
+            this.metroButton1.Click += new System.EventHandler(this.metroButton1_Click);
+            // 
             // client
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(789, 489);
+            this.Controls.Add(this.metroButton1);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.btn_delete);
             this.Controls.Add(this.btn_update);
@@ -375,10 +383,10 @@
         private System.Windows.Forms.ToolStripMenuItem gestionMarbreToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gestionGranitToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem gestionMarbreToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem gestionDesClientsToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripMenuItem quiterToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem suiviCommandeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem acceuilToolStripMenuItem;
+        private MetroFramework.Controls.MetroButton metroButton1;
     }
 }

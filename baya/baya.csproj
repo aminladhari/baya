@@ -91,6 +91,12 @@
     <Compile Include="Granit.Designer.cs">
       <DependentUpon>Granit.cs</DependentUpon>
     </Compile>
+    <Compile Include="Marbre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Marbre.Designer.cs">
+      <DependentUpon>Marbre.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Acceuil.resx">
@@ -107,6 +113,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Granit.resx">
       <DependentUpon>Granit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Marbre.resx">
+      <DependentUpon>Marbre.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

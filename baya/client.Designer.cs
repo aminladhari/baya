@@ -144,6 +144,8 @@
             this.metroTextBox3.UseSelectable = true;
             this.metroTextBox3.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.metroTextBox3.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.metroTextBox3.TextChanged += new System.EventHandler(this.metroTextBox3_TextChanged);
+            this.metroTextBox3.Click += new System.EventHandler(this.metroTextBox3_Click);
             // 
             // metroTextBox4
             // 

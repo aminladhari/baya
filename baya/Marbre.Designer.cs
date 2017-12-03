@@ -1,0 +1,145 @@
+﻿namespace baya
+{
+    partial class Marbre
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.acceuilToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gestionMarbreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gestionGranitToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.gestionMarbreToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.gestionDesClientsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.quiterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.suiviCommandeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip1.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Visible;
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.acceuilToolStripMenuItem,
+            this.gestionMarbreToolStripMenuItem,
+            this.suiviCommandeToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(20, 60);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
+            this.menuStrip1.Size = new System.Drawing.Size(749, 24);
+            this.menuStrip1.TabIndex = 14;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // acceuilToolStripMenuItem
+            // 
+            this.acceuilToolStripMenuItem.Name = "acceuilToolStripMenuItem";
+            this.acceuilToolStripMenuItem.Size = new System.Drawing.Size(58, 20);
+            this.acceuilToolStripMenuItem.Text = "Acceuil";
+            this.acceuilToolStripMenuItem.Click += new System.EventHandler(this.acceuilToolStripMenuItem_Click);
+            // 
+            // gestionMarbreToolStripMenuItem
+            // 
+            this.gestionMarbreToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.gestionGranitToolStripMenuItem1,
+            this.gestionMarbreToolStripMenuItem1,
+            this.gestionDesClientsToolStripMenuItem,
+            this.toolStripSeparator1,
+            this.quiterToolStripMenuItem});
+            this.gestionMarbreToolStripMenuItem.Name = "gestionMarbreToolStripMenuItem";
+            this.gestionMarbreToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
+            this.gestionMarbreToolStripMenuItem.Text = "Menu";
+            // 
+            // gestionGranitToolStripMenuItem1
+            // 
+            this.gestionGranitToolStripMenuItem1.Name = "gestionGranitToolStripMenuItem1";
+            this.gestionGranitToolStripMenuItem1.Size = new System.Drawing.Size(172, 22);
+            this.gestionGranitToolStripMenuItem1.Text = "Gestion Granit";
+            this.gestionGranitToolStripMenuItem1.Click += new System.EventHandler(this.gestionGranitToolStripMenuItem1_Click);
+            // 
+            // gestionMarbreToolStripMenuItem1
+            // 
+            this.gestionMarbreToolStripMenuItem1.Name = "gestionMarbreToolStripMenuItem1";
+            this.gestionMarbreToolStripMenuItem1.Size = new System.Drawing.Size(172, 22);
+            this.gestionMarbreToolStripMenuItem1.Text = "Gestion Marbre";
+            this.gestionMarbreToolStripMenuItem1.Click += new System.EventHandler(this.gestionMarbreToolStripMenuItem1_Click);
+            // 
+            // gestionDesClientsToolStripMenuItem
+            // 
+            this.gestionDesClientsToolStripMenuItem.Name = "gestionDesClientsToolStripMenuItem";
+            this.gestionDesClientsToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.gestionDesClientsToolStripMenuItem.Text = "Gestion des clients";
+            this.gestionDesClientsToolStripMenuItem.Click += new System.EventHandler(this.gestionDesClientsToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(169, 6);
+            // 
+            // quiterToolStripMenuItem
+            // 
+            this.quiterToolStripMenuItem.Name = "quiterToolStripMenuItem";
+            this.quiterToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.quiterToolStripMenuItem.Text = "Quiter";
+            this.quiterToolStripMenuItem.Click += new System.EventHandler(this.quiterToolStripMenuItem_Click);
+            // 
+            // suiviCommandeToolStripMenuItem
+            // 
+            this.suiviCommandeToolStripMenuItem.Name = "suiviCommandeToolStripMenuItem";
+            this.suiviCommandeToolStripMenuItem.Size = new System.Drawing.Size(110, 20);
+            this.suiviCommandeToolStripMenuItem.Text = "Suivi Commande";
+            // 
+            // Marbre
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(789, 489);
+            this.Controls.Add(this.menuStrip1);
+            this.Name = "Marbre";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
+            this.Text = "Marbre";
+            this.TextAlign = MetroFramework.Forms.MetroFormTextAlign.Center;
+            this.Load += new System.EventHandler(this.Marbre_Load);
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem acceuilToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem gestionMarbreToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem gestionGranitToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem gestionMarbreToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem gestionDesClientsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripMenuItem quiterToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem suiviCommandeToolStripMenuItem;
+    }
+}

@@ -127,5 +127,12 @@ namespace baya
             Granit ac = new Granit();
             ac.Show();
         }
+
+        private void gestionMarbreToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Granit ac = new Granit();
+            ac.Show();
+        }
     }
 }

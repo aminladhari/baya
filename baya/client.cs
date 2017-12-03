@@ -64,10 +64,12 @@ namespace baya
 
 		private void btn_add_Click(object sender, EventArgs e)
 		{
-			if ((metroTextBox1.Text == "") || (metroTextBox2.Text == "") || (metroTextBox3.Text == "") || (metroTextBox4.Text == ""))
+			int o;
+			if ((int.TryParse(metroTextBox3.Text, out o) == false)||(metroTextBox1.Text == "") || (metroTextBox2.Text == "") || (metroTextBox3.Text == "") || (metroTextBox4.Text == ""))
 			{
 				MessageBox.Show("Veuillez remplir les champs", "Champ(s)vide", MessageBoxButtons.OK, MessageBoxIcon.Stop);
-
+				MessageBox.Show("Champs non valide doit étre numérique", "Alerte", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				metroTextBox3.Text = "12345678";
 				metroTextBox1.Focus();
 				metroTextBox2.Focus();
 				metroTextBox3.Focus();
@@ -99,6 +101,8 @@ namespace baya
 
 
 				}
+				
+				
 
 				else
 				{
@@ -207,14 +211,32 @@ namespace baya
 
 		private void gestionMarbreToolStripMenuItem1_Click(object sender, EventArgs e)
 		{
-
-		}
+            this.Hide();
+            Marbre ac = new Marbre();
+            ac.Show();
+        }
 
 		private void gestionGranitToolStripMenuItem1_Click(object sender, EventArgs e)
 		{
 			this.Hide();
 			Granit ac = new Granit();
 			ac.Show();
+		}
+
+		private void metroTextBox3_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void metroTextBox3_TextChanged(object sender, EventArgs e)
+		{
+			
+				// maximum 8 caractére
+				metroTextBox3.MaxLength = 8;
+			
+
+			
+			
 		}
 	}
 }

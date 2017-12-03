@@ -213,6 +213,7 @@ namespace baya
             this.gestionMarbreToolStripMenuItem1.Name = "gestionMarbreToolStripMenuItem1";
             this.gestionMarbreToolStripMenuItem1.Size = new System.Drawing.Size(172, 22);
             this.gestionMarbreToolStripMenuItem1.Text = "Gestion Marbre";
+            this.gestionMarbreToolStripMenuItem1.Click += new System.EventHandler(this.gestionMarbreToolStripMenuItem1_Click);
             // 
             // gestionDesClientsToolStripMenuItem
             // 

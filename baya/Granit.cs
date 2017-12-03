@@ -92,11 +92,12 @@ namespace baya
 
         private void btn_add_Click_1(object sender, EventArgs e)
         {
-
-            if ((metroTextBox1.Text == "") || (metroTextBox2.Text == "") )
+            int o;
+            if ((metroTextBox1.Text == "") || (metroTextBox2.Text == "")|| (int.TryParse(metroTextBox2.Text, out o) == false))
             {
                 MessageBox.Show("Veuillez remplir les champs", "Champ(s)vide", MessageBoxButtons.OK, MessageBoxIcon.Stop);
-
+                MessageBox.Show("Champs non valide doit étre numérique", "Alerte", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                metroTextBox2.Text = "11111";
                 metroTextBox1.Focus();
                 metroTextBox2.Focus();
                
@@ -224,6 +225,18 @@ namespace baya
                     chargementgrid();
                 }
             }
+        }
+
+        private void metroTextBox2_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void gestionMarbreToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Marbre ac = new Marbre();
+            ac.Show();
         }
     }
 }

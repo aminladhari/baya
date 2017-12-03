@@ -97,6 +97,7 @@
             this.gestionMarbreToolStripMenuItem1.Name = "gestionMarbreToolStripMenuItem1";
             this.gestionMarbreToolStripMenuItem1.Size = new System.Drawing.Size(172, 22);
             this.gestionMarbreToolStripMenuItem1.Text = "Gestion Marbre";
+            this.gestionMarbreToolStripMenuItem1.Click += new System.EventHandler(this.gestionMarbreToolStripMenuItem1_Click);
             // 
             // toolStripSeparator1
             // 
@@ -224,6 +225,7 @@
             this.metroTextBox2.UseSelectable = true;
             this.metroTextBox2.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.metroTextBox2.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.metroTextBox2.TextChanged += new System.EventHandler(this.metroTextBox2_TextChanged);
             // 
             // metroTextBox1
             // 

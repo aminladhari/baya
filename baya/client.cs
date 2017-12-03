@@ -50,7 +50,7 @@ namespace baya
 
 				Connexion.cnx.Close();
 				Connexion.cnx.Open();
-				Connexion.cmd.CommandText = "update client set nom='" + metroTextBox1.Text.ToString() + "',prenom='" + metroTextBox2.Text.ToString() + "',cin='" + metroTextBox3.Text.ToString() + "',adresse='" + metroTextBox4.Text.ToString() + "'";
+				Connexion.cmd.CommandText = "update client set nom='" + metroTextBox1.Text.ToString() + "',prenom='" + metroTextBox2.Text.ToString() + "',cin='" + metroTextBox3.Text.ToString() + "',adresse='" + metroTextBox4.Text.ToString() + "' where id_client='"+id.Text.ToString()+"' ";
 				Connexion.cmd.ExecuteNonQuery();
 				MessageBox.Show("Client modifié(e) avec succé", "Modification Client", MessageBoxButtons.OK, MessageBoxIcon.Information);
 				chargementgrid();
@@ -153,6 +153,7 @@ namespace baya
 
 		private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
 		{
+			id.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
 			metroTextBox1.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
 			metroTextBox2.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
 			metroTextBox3.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
@@ -202,6 +203,18 @@ namespace baya
 				}
 			}
 			
+		}
+
+		private void gestionMarbreToolStripMenuItem1_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void gestionGranitToolStripMenuItem1_Click(object sender, EventArgs e)
+		{
+			this.Hide();
+			Granit ac = new Granit();
+			ac.Show();
 		}
 	}
 }

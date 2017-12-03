@@ -15,3 +15,4 @@ C:\Users\Amine\Desktop\baya\baya\bin\Debug\MySql.Data.dll
 C:\Users\Amine\Desktop\baya\baya\bin\Debug\MySql.Data.xml
 C:\Users\Amine\Desktop\baya\baya\obj\Debug\baya.Acceuil.resources
 C:\Users\Amine\Desktop\baya\baya\obj\Debug\baya.client.resources
+C:\Users\Amine\Desktop\baya\baya\obj\Debug\baya.Granit.resources

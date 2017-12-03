@@ -206,6 +206,7 @@ namespace baya
             this.gestionGranitToolStripMenuItem1.Name = "gestionGranitToolStripMenuItem1";
             this.gestionGranitToolStripMenuItem1.Size = new System.Drawing.Size(172, 22);
             this.gestionGranitToolStripMenuItem1.Text = "Gestion Granit";
+            this.gestionGranitToolStripMenuItem1.Click += new System.EventHandler(this.gestionGranitToolStripMenuItem1_Click);
             // 
             // gestionMarbreToolStripMenuItem1
             // 

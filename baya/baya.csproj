@@ -85,6 +85,12 @@
       <DependentUpon>client.cs</DependentUpon>
     </Compile>
     <Compile Include="Connexion.cs" />
+    <Compile Include="Granit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Granit.Designer.cs">
+      <DependentUpon>Granit.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Acceuil.resx">
@@ -98,6 +104,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="client.resx">
       <DependentUpon>client.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Granit.resx">
+      <DependentUpon>Granit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

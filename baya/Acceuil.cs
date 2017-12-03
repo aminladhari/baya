@@ -120,5 +120,12 @@ namespace baya
         {
 
         }
+
+        private void gestionGranitToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Granit ac = new Granit();
+            ac.Show();
+        }
     }
 }

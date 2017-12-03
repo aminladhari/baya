@@ -50,6 +50,7 @@
             this.quiterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.suiviCommandeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.metroButton1 = new MetroFramework.Controls.MetroButton();
+            this.id = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -298,12 +299,14 @@
             this.gestionGranitToolStripMenuItem1.Name = "gestionGranitToolStripMenuItem1";
             this.gestionGranitToolStripMenuItem1.Size = new System.Drawing.Size(155, 22);
             this.gestionGranitToolStripMenuItem1.Text = "Gestion Granit";
+            this.gestionGranitToolStripMenuItem1.Click += new System.EventHandler(this.gestionGranitToolStripMenuItem1_Click);
             // 
             // gestionMarbreToolStripMenuItem1
             // 
             this.gestionMarbreToolStripMenuItem1.Name = "gestionMarbreToolStripMenuItem1";
             this.gestionMarbreToolStripMenuItem1.Size = new System.Drawing.Size(155, 22);
             this.gestionMarbreToolStripMenuItem1.Text = "Gestion Marbre";
+            this.gestionMarbreToolStripMenuItem1.Click += new System.EventHandler(this.gestionMarbreToolStripMenuItem1_Click);
             // 
             // toolStripSeparator1
             // 
@@ -333,11 +336,20 @@
             this.metroButton1.UseSelectable = true;
             this.metroButton1.Click += new System.EventHandler(this.metroButton1_Click);
             // 
+            // id
+            // 
+            this.id.Location = new System.Drawing.Point(659, 93);
+            this.id.Name = "id";
+            this.id.Size = new System.Drawing.Size(53, 20);
+            this.id.TabIndex = 24;
+            this.id.Visible = false;
+            // 
             // client
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(789, 489);
+            this.Controls.Add(this.id);
             this.Controls.Add(this.metroButton1);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.btn_delete);
@@ -388,5 +400,6 @@
         private System.Windows.Forms.ToolStripMenuItem suiviCommandeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem acceuilToolStripMenuItem;
         private MetroFramework.Controls.MetroButton metroButton1;
+        private System.Windows.Forms.TextBox id;
     }
 }

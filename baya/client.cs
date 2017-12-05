@@ -47,10 +47,15 @@ namespace baya
 
 		private void btn_update_Click(object sender, EventArgs e)
 		{
-
+			if ((metroTextBox1.Text == "") || (metroTextBox2.Text == "")|| (metroTextBox3.Text == "")|| (metroTextBox4.Text == ""))
+			{
+				MessageBox.Show("Veuillez remplir les champs", "Champ(s)vide", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+			}
+			else
+			{
 				Connexion.cnx.Close();
 				Connexion.cnx.Open();
-				Connexion.cmd.CommandText = "update client set nom='" + metroTextBox1.Text.ToString() + "',prenom='" + metroTextBox2.Text.ToString() + "',cin='" + metroTextBox3.Text.ToString() + "',adresse='" + metroTextBox4.Text.ToString() + "' where id_client='"+id.Text.ToString()+"' ";
+				Connexion.cmd.CommandText = "update client set nom='" + metroTextBox1.Text.ToString() + "',prenom='" + metroTextBox2.Text.ToString() + "',cin='" + metroTextBox3.Text.ToString() + "',adresse='" + metroTextBox4.Text.ToString() + "' where id_client='" + id.Text.ToString() + "' ";
 				Connexion.cmd.ExecuteNonQuery();
 				MessageBox.Show("Client modifié(e) avec succé", "Modification Client", MessageBoxButtons.OK, MessageBoxIcon.Information);
 				chargementgrid();
@@ -58,7 +63,7 @@ namespace baya
 				metroTextBox2.Text = "";
 				metroTextBox3.Text = "";
 				metroTextBox4.Text = "";
-
+			}
 
 		}
 
@@ -211,10 +216,10 @@ namespace baya
 
 		private void gestionMarbreToolStripMenuItem1_Click(object sender, EventArgs e)
 		{
-            this.Hide();
-            Marbre ac = new Marbre();
-            ac.Show();
-        }
+			this.Hide();
+			Marbre ac = new Marbre();
+			ac.Show();
+		}
 
 		private void gestionGranitToolStripMenuItem1_Click(object sender, EventArgs e)
 		{

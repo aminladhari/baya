@@ -180,16 +180,22 @@ namespace baya
 
         private void btn_update_Click_1(object sender, EventArgs e)
         {
+            if ((metroTextBox1.Text == "") || (metroTextBox2.Text == ""))
+            {
+                MessageBox.Show("Veuillez remplir les champs", "Champ(s)vide", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+            }
+            else
+            {
+                Connexion.cnx.Close();
+                Connexion.cnx.Open();
+                Connexion.cmd.CommandText = "update granit set designation ='" + metroTextBox1.Text.ToString() + "',prix='" + metroTextBox2.Text.ToString() + "' where idgranit ='" + id.Text.ToString() + "' ";
+                Connexion.cmd.ExecuteNonQuery();
+                MessageBox.Show("Type modifié(e) avec succé", "Modification produit", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                chargementgrid();
+                metroTextBox1.Text = "";
+                metroTextBox2.Text = "";
 
-            Connexion.cnx.Close();
-            Connexion.cnx.Open();
-            Connexion.cmd.CommandText = "update granit set designation ='" + metroTextBox1.Text.ToString() + "',prix='" + metroTextBox2.Text.ToString() + "' where idgranit ='" + id.Text.ToString()+"' ";
-            Connexion.cmd.ExecuteNonQuery();
-            MessageBox.Show("Type modifié(e) avec succé", "Modification produit", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            chargementgrid();
-            metroTextBox1.Text = "";
-            metroTextBox2.Text = "";
-            
+            }
         }
 
         private void btn_delete_Click_1(object sender, EventArgs e)

@@ -503,7 +503,7 @@ namespace baya
             this.metroDateTime1.Location = new System.Drawing.Point(23, 17);
             this.metroDateTime1.MinimumSize = new System.Drawing.Size(0, 29);
             this.metroDateTime1.Name = "metroDateTime1";
-            this.metroDateTime1.Size = new System.Drawing.Size(200, 29);
+            this.metroDateTime1.Size = new System.Drawing.Size(215, 29);
             this.metroDateTime1.TabIndex = 9;
             // 
             // dataGridView3
@@ -554,6 +554,7 @@ namespace baya
             this.btn_supprimer.TabIndex = 42;
             this.btn_supprimer.Text = "         Annuler";
             this.btn_supprimer.UseVisualStyleBackColor = false;
+            this.btn_supprimer.Click += new System.EventHandler(this.btn_supprimer_Click);
             // 
             // btn_ajouter
             // 

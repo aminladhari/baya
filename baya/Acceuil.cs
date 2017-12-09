@@ -27,6 +27,7 @@ namespace baya
             y.ChargementComboBox("select valeur from epaisseur", combo_epai);
             z.ChargementComboBox("select type from typemarbre", type);
             chargementclient();
+            chargementdetail();
 
 
         }
@@ -69,6 +70,20 @@ namespace baya
             System.Data.DataTable dt = new System.Data.DataTable();
             dt = ds.Tables["granit"];
             dataGridView1.DataSource = dt;
+            Connexion.cnx.Close();
+
+        }
+        private void chargementdetail()
+        {
+            //chargement de datagridview
+
+            Connexion.cmd.CommandText = "Select * from details ";
+            MySqlDataAdapter da = new MySqlDataAdapter(Connexion.cmd);
+            DataSet ds = new DataSet();
+            da.Fill(ds, "details");
+            System.Data.DataTable dt = new System.Data.DataTable();
+            dt = ds.Tables["details"];
+            dataGridView3.DataSource = dt;
             Connexion.cnx.Close();
 
         }
@@ -207,8 +222,11 @@ namespace baya
         private void btn_ajouter_Click(object sender, EventArgs e)
         {
             int o;
-            if ((int.TryParse(txtbox_metrage.Text, out o)))
-                MessageBox.Show("Champs non valide, il doit étre numérique ", "Alerte", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            if ((int.TryParse(txtbox_metrage.Text, out o)) || txtbox_metrage.Text == "" || libele.Text == "" || qt.Text == "" || cin.Text == "" || prix_produit.Text == "")
+                { 
+                    MessageBox.Show("vérifier les champs !!", "Alerte champs vides", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Champs métrage non valide, il doit étre numérique ", "Alerte", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             else
             {
                 try
@@ -251,6 +269,11 @@ namespace baya
         private void qt_TextChanged(object sender, EventArgs e)
         {
             total_article.Text = (float.Parse(txtbox_metrage.Text.ToString()) * float.Parse(prix_produit.Text.ToString()) * float.Parse(qt.Text.ToString())).ToString();
+        }
+
+        private void btn_supprimer_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

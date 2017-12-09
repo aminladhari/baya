@@ -157,7 +157,7 @@ namespace baya
 
 		private void quiterToolStripMenuItem_Click(object sender, EventArgs e)
 		{
-			this.Close();
+			Application.Exit();
 		}
 
 		private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)

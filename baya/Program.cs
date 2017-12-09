@@ -16,7 +16,7 @@ namespace baya
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Marbre());
+            Application.Run(new Acceuil());
         }
     }
 }

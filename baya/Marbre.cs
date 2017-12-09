@@ -68,7 +68,7 @@ namespace baya
 
         private void quiterToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
 
         private void metroButton1_Click(object sender, EventArgs e)
@@ -217,6 +217,11 @@ namespace baya
                     chargementgrid();
                 }
             }
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

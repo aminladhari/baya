@@ -47,7 +47,7 @@ namespace baya
 
         private void quiterToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
 
         private void gestionGranitToolStripMenuItem1_Click(object sender, EventArgs e)

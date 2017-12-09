@@ -75,13 +75,8 @@ namespace baya
             this.metroLabel11 = new MetroFramework.Controls.MetroLabel();
             this.libele = new MetroFramework.Controls.MetroTextBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.label41 = new System.Windows.Forms.Label();
             this.txt_montant_total = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.txt_remise = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.txt_montant_ttc = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.txt_montant_tva = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txt_montant_htva = new System.Windows.Forms.TextBox();
@@ -91,6 +86,10 @@ namespace baya
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.id_details = new System.Windows.Forms.TextBox();
+            this.btn_clc = new MetroFramework.Controls.MetroButton();
+            this.tva = new MetroFramework.Controls.MetroTextBox();
+            this.button3 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -513,6 +512,7 @@ namespace baya
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.Size = new System.Drawing.Size(573, 150);
             this.dataGridView3.TabIndex = 10;
+            this.dataGridView3.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView3_CellClick);
             // 
             // groupBox4
             // 
@@ -568,7 +568,7 @@ namespace baya
             this.btn_ajouter.Name = "btn_ajouter";
             this.btn_ajouter.Size = new System.Drawing.Size(123, 58);
             this.btn_ajouter.TabIndex = 0;
-            this.btn_ajouter.Text = "            Valider";
+            this.btn_ajouter.Text = "            Ajouter";
             this.btn_ajouter.UseVisualStyleBackColor = false;
             this.btn_ajouter.Click += new System.EventHandler(this.btn_ajouter_Click);
             // 
@@ -600,9 +600,9 @@ namespace baya
             this.metroLabel8.AutoSize = true;
             this.metroLabel8.Location = new System.Drawing.Point(495, 33);
             this.metroLabel8.Name = "metroLabel8";
-            this.metroLabel8.Size = new System.Drawing.Size(78, 19);
+            this.metroLabel8.Size = new System.Drawing.Size(86, 19);
             this.metroLabel8.TabIndex = 10;
-            this.metroLabel8.Text = "Prix article :";
+            this.metroLabel8.Text = "Prix 1 Métre :";
             // 
             // prix_produit
             // 
@@ -760,14 +760,11 @@ namespace baya
             // groupBox5
             // 
             this.groupBox5.BackColor = System.Drawing.Color.White;
+            this.groupBox5.Controls.Add(this.tva);
+            this.groupBox5.Controls.Add(this.btn_clc);
             this.groupBox5.Controls.Add(this.label3);
-            this.groupBox5.Controls.Add(this.label41);
             this.groupBox5.Controls.Add(this.txt_montant_total);
             this.groupBox5.Controls.Add(this.label12);
-            this.groupBox5.Controls.Add(this.txt_remise);
-            this.groupBox5.Controls.Add(this.label11);
-            this.groupBox5.Controls.Add(this.txt_montant_ttc);
-            this.groupBox5.Controls.Add(this.label2);
             this.groupBox5.Controls.Add(this.txt_montant_tva);
             this.groupBox5.Controls.Add(this.label1);
             this.groupBox5.Controls.Add(this.txt_montant_htva);
@@ -781,26 +778,13 @@ namespace baya
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Total";
             // 
-            // label41
-            // 
-            this.label41.AutoSize = true;
-            this.label41.BackColor = System.Drawing.Color.Transparent;
-            this.label41.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label41.ForeColor = System.Drawing.Color.Black;
-            this.label41.Location = new System.Drawing.Point(314, 139);
-            this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(28, 22);
-            this.label41.TabIndex = 77;
-            this.label41.Text = "%";
-            this.label41.Click += new System.EventHandler(this.label41_Click);
-            // 
             // txt_montant_total
             // 
             this.txt_montant_total.Enabled = false;
-            this.txt_montant_total.Location = new System.Drawing.Point(153, 95);
+            this.txt_montant_total.Location = new System.Drawing.Point(159, 110);
             this.txt_montant_total.Multiline = true;
             this.txt_montant_total.Name = "txt_montant_total";
-            this.txt_montant_total.Size = new System.Drawing.Size(154, 27);
+            this.txt_montant_total.Size = new System.Drawing.Size(165, 27);
             this.txt_montant_total.TabIndex = 76;
             this.txt_montant_total.Text = "0";
             // 
@@ -810,63 +794,19 @@ namespace baya
             this.label12.BackColor = System.Drawing.Color.Transparent;
             this.label12.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.Black;
-            this.label12.Location = new System.Drawing.Point(11, 98);
+            this.label12.Location = new System.Drawing.Point(17, 113);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(134, 19);
             this.label12.TabIndex = 75;
             this.label12.Text = "Montant Total TTC :";
             // 
-            // txt_remise
-            // 
-            this.txt_remise.Location = new System.Drawing.Point(153, 134);
-            this.txt_remise.Multiline = true;
-            this.txt_remise.Name = "txt_remise";
-            this.txt_remise.Size = new System.Drawing.Size(154, 27);
-            this.txt_remise.TabIndex = 74;
-            this.txt_remise.Text = "0";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.Black;
-            this.label11.Location = new System.Drawing.Point(15, 137);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(60, 19);
-            this.label11.TabIndex = 73;
-            this.label11.Text = "Remise :";
-            // 
-            // txt_montant_ttc
-            // 
-            this.txt_montant_ttc.Enabled = false;
-            this.txt_montant_ttc.Location = new System.Drawing.Point(153, 181);
-            this.txt_montant_ttc.Multiline = true;
-            this.txt_montant_ttc.Name = "txt_montant_ttc";
-            this.txt_montant_ttc.Size = new System.Drawing.Size(154, 27);
-            this.txt_montant_ttc.TabIndex = 70;
-            this.txt_montant_ttc.Text = "0";
-            this.txt_montant_ttc.TextChanged += new System.EventHandler(this.txt_montant_ttc_TextChanged);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(15, 181);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(118, 19);
-            this.label2.TabIndex = 69;
-            this.label2.Text = "Montant A payer :";
-            // 
             // txt_montant_tva
             // 
             this.txt_montant_tva.Enabled = false;
-            this.txt_montant_tva.Location = new System.Drawing.Point(153, 54);
+            this.txt_montant_tva.Location = new System.Drawing.Point(163, 52);
             this.txt_montant_tva.Multiline = true;
             this.txt_montant_tva.Name = "txt_montant_tva";
-            this.txt_montant_tva.Size = new System.Drawing.Size(154, 27);
+            this.txt_montant_tva.Size = new System.Drawing.Size(161, 27);
             this.txt_montant_tva.TabIndex = 68;
             this.txt_montant_tva.Text = "0";
             // 
@@ -876,19 +816,19 @@ namespace baya
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(15, 60);
+            this.label1.Location = new System.Drawing.Point(17, 58);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(103, 19);
+            this.label1.Size = new System.Drawing.Size(140, 19);
             this.label1.TabIndex = 67;
-            this.label1.Text = "Montant  TVA :";
+            this.label1.Text = "Montant  totale TVA :";
             // 
             // txt_montant_htva
             // 
             this.txt_montant_htva.Enabled = false;
-            this.txt_montant_htva.Location = new System.Drawing.Point(153, 15);
+            this.txt_montant_htva.Location = new System.Drawing.Point(162, 19);
             this.txt_montant_htva.Multiline = true;
             this.txt_montant_htva.Name = "txt_montant_htva";
-            this.txt_montant_htva.Size = new System.Drawing.Size(154, 27);
+            this.txt_montant_htva.Size = new System.Drawing.Size(162, 27);
             this.txt_montant_htva.TabIndex = 66;
             this.txt_montant_htva.Text = "0";
             // 
@@ -898,7 +838,7 @@ namespace baya
             this.label18.BackColor = System.Drawing.Color.Transparent;
             this.label18.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.ForeColor = System.Drawing.Color.Black;
-            this.label18.Location = new System.Drawing.Point(8, 20);
+            this.label18.Location = new System.Drawing.Point(17, 24);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(147, 19);
             this.label18.TabIndex = 65;
@@ -910,16 +850,17 @@ namespace baya
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(314, 55);
+            this.label3.Location = new System.Drawing.Point(332, 24);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(68, 22);
+            this.label3.Size = new System.Drawing.Size(88, 22);
             this.label3.TabIndex = 78;
-            this.label3.Text = "* 18 %";
+            this.label3.Text = "*          %";
             // 
             // btn_imprimer
             // 
             this.btn_imprimer.BackColor = System.Drawing.Color.White;
             this.btn_imprimer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_imprimer.Enabled = false;
             this.btn_imprimer.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_imprimer.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btn_imprimer.Image = ((System.Drawing.Image)(resources.GetObject("btn_imprimer.Image")));
@@ -936,6 +877,7 @@ namespace baya
             // 
             this.button1.BackColor = System.Drawing.Color.White;
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.Enabled = false;
             this.button1.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
@@ -952,6 +894,7 @@ namespace baya
             // 
             this.button2.BackColor = System.Drawing.Color.White;
             this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button2.Enabled = false;
             this.button2.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.SystemColors.ControlText;
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
@@ -966,6 +909,7 @@ namespace baya
             // groupBox6
             // 
             this.groupBox6.BackColor = System.Drawing.Color.White;
+            this.groupBox6.Controls.Add(this.button3);
             this.groupBox6.Controls.Add(this.button1);
             this.groupBox6.Controls.Add(this.button2);
             this.groupBox6.Controls.Add(this.btn_imprimer);
@@ -976,13 +920,83 @@ namespace baya
             this.groupBox6.Size = new System.Drawing.Size(370, 215);
             this.groupBox6.TabIndex = 112;
             this.groupBox6.TabStop = false;
-            this.groupBox6.Text = "Opération Article";
+            this.groupBox6.Text = "Opération Commande";
+            // 
+            // id_details
+            // 
+            this.id_details.Enabled = false;
+            this.id_details.Location = new System.Drawing.Point(29, 518);
+            this.id_details.Name = "id_details";
+            this.id_details.Size = new System.Drawing.Size(57, 20);
+            this.id_details.TabIndex = 113;
+            this.id_details.Visible = false;
+            // 
+            // btn_clc
+            // 
+            this.btn_clc.Location = new System.Drawing.Point(437, 73);
+            this.btn_clc.Name = "btn_clc";
+            this.btn_clc.Size = new System.Drawing.Size(104, 29);
+            this.btn_clc.TabIndex = 79;
+            this.btn_clc.Text = "Calculer";
+            this.btn_clc.UseSelectable = true;
+            this.btn_clc.Click += new System.EventHandler(this.btn_clc_Click);
+            // 
+            // tva
+            // 
+            // 
+            // 
+            // 
+            this.tva.CustomButton.Image = null;
+            this.tva.CustomButton.Location = new System.Drawing.Point(13, 1);
+            this.tva.CustomButton.Name = "";
+            this.tva.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.tva.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.tva.CustomButton.TabIndex = 1;
+            this.tva.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.tva.CustomButton.UseSelectable = true;
+            this.tva.CustomButton.Visible = false;
+            this.tva.Lines = new string[] {
+        "0"};
+            this.tva.Location = new System.Drawing.Point(350, 25);
+            this.tva.MaxLength = 32767;
+            this.tva.Name = "tva";
+            this.tva.PasswordChar = '\0';
+            this.tva.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.tva.SelectedText = "";
+            this.tva.SelectionLength = 0;
+            this.tva.SelectionStart = 0;
+            this.tva.ShortcutsEnabled = true;
+            this.tva.Size = new System.Drawing.Size(35, 23);
+            this.tva.TabIndex = 80;
+            this.tva.Text = "0";
+            this.tva.UseSelectable = true;
+            this.tva.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.tva.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.tva.TextChanged += new System.EventHandler(this.tva_TextChanged);
+            this.tva.Click += new System.EventHandler(this.tva_Click);
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.White;
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button3.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.Location = new System.Drawing.Point(204, 24);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(138, 53);
+            this.button3.TabIndex = 112;
+            this.button3.Text = "        Vider";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // Acceuil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1004, 949);
+            this.Controls.Add(this.id_details);
             this.Controls.Add(this.groupBox6);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox_opération);
@@ -1066,13 +1080,8 @@ namespace baya
         private MetroFramework.Controls.MetroLabel metroLabel8;
         private MetroFramework.Controls.MetroTextBox prix_produit;
         private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.Label label41;
         private System.Windows.Forms.TextBox txt_montant_total;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox txt_remise;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox txt_montant_ttc;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txt_montant_tva;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txt_montant_htva;
@@ -1082,5 +1091,9 @@ namespace baya
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.GroupBox groupBox6;
+        private System.Windows.Forms.TextBox id_details;
+        private MetroFramework.Controls.MetroButton btn_clc;
+        private MetroFramework.Controls.MetroTextBox tva;
+        private System.Windows.Forms.Button button3;
     }
 }

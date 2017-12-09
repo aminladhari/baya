@@ -84,6 +84,12 @@
     <Compile Include="client.Designer.cs">
       <DependentUpon>client.cs</DependentUpon>
     </Compile>
+    <Compile Include="Commande.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Commande.Designer.cs">
+      <DependentUpon>Commande.cs</DependentUpon>
+    </Compile>
     <Compile Include="Connexion.cs" />
     <Compile Include="Granit.cs">
       <SubType>Form</SubType>
@@ -110,6 +116,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="client.resx">
       <DependentUpon>client.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Commande.resx">
+      <DependentUpon>Commande.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Granit.resx">
       <DependentUpon>Granit.cs</DependentUpon>

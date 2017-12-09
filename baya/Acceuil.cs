@@ -7,11 +7,12 @@ using System.Windows.Forms;
 namespace baya
 {
     public partial class Acceuil : MetroForm
-        
+
     {
         Chargementfichier x = new Chargementfichier();
         Chargementfichier y = new Chargementfichier();
         Chargementfichier z = new Chargementfichier();
+        int somme;
         public Acceuil()
         {
             InitializeComponent();
@@ -19,7 +20,7 @@ namespace baya
             this.ShadowType = MetroFormShadowType.AeroShadow;
 
         }
-       
+
 
         private void Acceuil_Load(object sender, EventArgs e)
         {
@@ -41,7 +42,7 @@ namespace baya
             da.Fill(ds, "marbre");
             System.Data.DataTable dt = new System.Data.DataTable();
             dt = ds.Tables["marbre"];
-           dataGridView1.DataSource = dt;
+            dataGridView1.DataSource = dt;
             Connexion.cnx.Close();
 
         }
@@ -115,11 +116,11 @@ namespace baya
 
         private void type_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (type.SelectedItem.ToString()=="Marbre")
+            if (type.SelectedItem.ToString() == "Marbre")
             {
                 chargementgrid();
             }
-            else if (type.SelectedItem.ToString()== "Granit") 
+            else if (type.SelectedItem.ToString() == "Granit")
             {
                 chargementgrid2();
 
@@ -178,7 +179,7 @@ namespace baya
 
         private void dataGridView2_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            
+
             nom.Text = dataGridView2.Rows[e.RowIndex].Cells[0].Value.ToString();
             prenom.Text = dataGridView2.Rows[e.RowIndex].Cells[1].Value.ToString();
             adresse.Text = dataGridView2.Rows[e.RowIndex].Cells[3].Value.ToString();
@@ -206,7 +207,7 @@ namespace baya
         {
             libele.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
             prix_produit.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
-           
+
         }
 
         private void label41_Click(object sender, EventArgs e)
@@ -223,15 +224,15 @@ namespace baya
         {
             int o;
             if ((int.TryParse(txtbox_metrage.Text, out o)) || txtbox_metrage.Text == "" || libele.Text == "" || qt.Text == "" || cin.Text == "" || prix_produit.Text == "")
-                { 
-                    MessageBox.Show("vérifier les champs !!", "Alerte champs vides", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    MessageBox.Show("Champs métrage non valide, il doit étre numérique ", "Alerte", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+            {
+                MessageBox.Show("vérifier les champs !!", "Alerte champs vides", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Champs métrage non valide, il doit étre numérique ", "Alerte", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
             else
             {
                 try
                 {
-                    
+
 
                     Connexion.cnx.Close();
                     Connexion.cnx.Open();
@@ -254,6 +255,7 @@ namespace baya
 
                     MessageBox.Show("Produit Ajouté(e) avec succé", "Détails de la commande", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Connexion.cnx.Close();
+                    btn_clc.Enabled = true;
 
                 }
                 catch (Exception p)
@@ -261,8 +263,14 @@ namespace baya
 
                     MessageBox.Show("Echec de connexion à la base de donnée : " + "==>" + p.Message);
                 }
+
+                btn_clc.Enabled = true;
+                button1.Enabled = true;
+                btn_imprimer.Enabled = true;
+                button1.Enabled = true;
+                   
             }
-            
+
 
         }
 
@@ -273,7 +281,80 @@ namespace baya
 
         private void btn_supprimer_Click(object sender, EventArgs e)
         {
+            Connexion.cnx.Close();
+            Connexion.cnx.Open();
+            DialogResult reponse;
+            reponse = MessageBox.Show("êtes_vous_sûr de supprimer l'article ?", "Confirmer la Suppression", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+            //code si oui confirmer la suppression
+            if (reponse == System.Windows.Forms.DialogResult.Yes)
+            {
+                Connexion.cmd.CommandText = "delete from details   where id_dc='" + id_details.Text.ToString() + "'";
+                Connexion.cmd.ExecuteNonQuery();
+                txtbox_metrage.Text = "";
+                libele.Text = "";
+                prix_produit.Text = "";
+                total_article.Text = "";
+
+
+                chargementdetail();
+            }
+        }
+
+        private void dataGridView3_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            id_details.Text = dataGridView3.Rows[e.RowIndex].Cells[0].Value.ToString();
+        }
+
+
+       
+        private void btn_clc_Click(object sender, EventArgs e)
+        {
+
+            for (int i = 0; i < dataGridView3.Rows.Count; i++)
+            {
+
+                somme += Convert.ToInt32(dataGridView3.Rows[i].Cells[7].Value);
+
+            }
+
+            
+            txt_montant_htva.Text =  somme.ToString();
+            btn_clc.Enabled = false;
+            button2.Enabled = true;
+
+            button2.Enabled = true;
+            btn_imprimer.Enabled = true;
+            button1.Enabled = true;
+
+
 
         }
+
+        private void tva_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tva_TextChanged(object sender, EventArgs e)
+        {
+            float q = float.Parse(txt_montant_htva.Text.ToString());
+            float w = q / 100;
+            float wq = w * 18;
+            txt_montant_tva.Text = wq.ToString();
+            float wqq = wq + q;
+            txt_montant_total.Text = wqq.ToString();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            txt_montant_htva.Text = "";
+            txt_montant_total.Text = "";
+            txt_montant_tva.Text = "";
+            btn_clc.Enabled = true;
+            button2.Enabled = false;
+            btn_imprimer.Enabled = false;
+            button1.Enabled = false;
+            somme = 0;
+        }   
     }
 }

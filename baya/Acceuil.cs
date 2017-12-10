@@ -12,7 +12,7 @@ namespace baya
         Chargementfichier x = new Chargementfichier();
         Chargementfichier y = new Chargementfichier();
         Chargementfichier z = new Chargementfichier();
-        int somme;
+        Decimal somme;
         public Acceuil()
         {
             InitializeComponent();
@@ -276,7 +276,7 @@ namespace baya
 
         private void qt_TextChanged(object sender, EventArgs e)
         {
-            total_article.Text = (float.Parse(txtbox_metrage.Text.ToString()) * float.Parse(prix_produit.Text.ToString()) * float.Parse(qt.Text.ToString())).ToString();
+            total_article.Text = (float.Parse(txtbox_metrage.Text.ToString()) * float.Parse(prix_produit.Text.ToString()) * float.Parse(qt.Text.ToString())).ToString("#.##");
         }
 
         private void btn_supprimer_Click(object sender, EventArgs e)
@@ -313,7 +313,7 @@ namespace baya
             for (int i = 0; i < dataGridView3.Rows.Count; i++)
             {
 
-                somme += Convert.ToInt32(dataGridView3.Rows[i].Cells[7].Value);
+                somme += Convert.ToDecimal(dataGridView3.Rows[i].Cells[7].Value);
 
             }
 
@@ -355,6 +355,76 @@ namespace baya
             btn_imprimer.Enabled = false;
             button1.Enabled = false;
             somme = 0;
-        }   
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            
+            if (txt_montant_htva.Text == "" || txt_montant_total.Text == "" || txt_montant_tva.Text == "" )
+            {
+                MessageBox.Show("vérifier les champs !!", "Alerte champs vides", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                
+            }
+            else
+            {
+                try
+                {
+
+
+                    Connexion.cnx.Close();
+                    Connexion.cnx.Open();
+                    String npr = nom.Text.ToString() + " " + prenom.Text.ToString();
+                    Connexion.cmd.CommandText = "insert into commande(tva,totale_htva,totale_tva,totoale_ttc,date,nom_premnom,cin)values('" + tva.Text.ToString() + "','" + txt_montant_htva.Text.ToString() + "','" + txt_montant_tva.Text.ToString() + "','" + txt_montant_total.Text.ToString() + "','" + metroDateTime1.Text.ToString() + "','"+ npr +"','" + cin.Text.ToString() + "')";
+                    Connexion.cmd.ExecuteNonQuery();
+
+                   
+
+                    txtbox_metrage.Text = "";
+                    libele.Text = "";
+                    prix_produit.Text = "";
+                    total_article.Text = "";
+
+                    MessageBox.Show("Commande enregistré", "Commande", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Connexion.cnx.Close();
+                    btn_clc.Enabled = true;
+
+                    Connexion.cnx.Open();
+                    Connexion.cmd.CommandText = "delete from details   where cin='" + cin.Text.ToString() + "'";
+                    Connexion.cmd.ExecuteNonQuery();
+                    Connexion.cnx.Close();
+                    nom.Text = "";
+                    prenom.Text = "";
+                    cin.Text = "";
+                    adresse.Text = "";
+                    tva.Text = "";
+                    txt_montant_htva.Text = "";
+                    txt_montant_tva.Text = "";
+                    txt_montant_total.Text = "";
+                    chargementdetail();
+
+
+                }
+                catch (Exception p)
+                {
+
+                    MessageBox.Show("Echec de connexion à la base de donnée : " + "==>" + p.Message);
+                }
+
+                
+
+            }
+        }
+
+        private void suiviCommandeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Commande ac = new Commande();
+            ac.Show();
+        }
+
+        private void qt_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

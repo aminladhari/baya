@@ -123,6 +123,7 @@
             this.suiviCommandeToolStripMenuItem.Name = "suiviCommandeToolStripMenuItem";
             this.suiviCommandeToolStripMenuItem.Size = new System.Drawing.Size(110, 20);
             this.suiviCommandeToolStripMenuItem.Text = "Suivi Commande";
+            this.suiviCommandeToolStripMenuItem.Click += new System.EventHandler(this.suiviCommandeToolStripMenuItem_Click);
             // 
             // id
             // 

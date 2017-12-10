@@ -244,5 +244,12 @@ namespace baya
             Marbre ac = new Marbre();
             ac.Show();
         }
+
+        private void suiviCommandeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Commande ac = new Commande();
+            ac.Show();
+        }
     }
 }

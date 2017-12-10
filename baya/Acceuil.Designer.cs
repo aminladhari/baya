@@ -36,6 +36,14 @@ namespace baya
             this.txtbox_metrage = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.metroLabel11 = new MetroFramework.Controls.MetroLabel();
+            this.libele = new MetroFramework.Controls.MetroTextBox();
+            this.metroLabel10 = new MetroFramework.Controls.MetroLabel();
+            this.total_article = new MetroFramework.Controls.MetroTextBox();
+            this.metroLabel9 = new MetroFramework.Controls.MetroLabel();
+            this.qt = new MetroFramework.Controls.MetroTextBox();
+            this.metroLabel8 = new MetroFramework.Controls.MetroLabel();
+            this.prix_produit = new MetroFramework.Controls.MetroTextBox();
             this.combo_epai = new MetroFramework.Controls.MetroComboBox();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -49,57 +57,49 @@ namespace baya
             this.quiterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.suiviCommandeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.rech_ref = new System.Windows.Forms.PictureBox();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
+            this.cin = new MetroFramework.Controls.MetroTextBox();
+            this.off = new System.Windows.Forms.Button();
             this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
+            this.adresse = new MetroFramework.Controls.MetroTextBox();
             this.nom = new MetroFramework.Controls.MetroTextBox();
             this.prenom = new MetroFramework.Controls.MetroTextBox();
-            this.adresse = new MetroFramework.Controls.MetroTextBox();
-            this.cin = new MetroFramework.Controls.MetroTextBox();
             this.metroDateTime1 = new MetroFramework.Controls.MetroDateTime();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.groupBox_opération = new System.Windows.Forms.GroupBox();
             this.btn_supprimer = new System.Windows.Forms.Button();
             this.btn_ajouter = new System.Windows.Forms.Button();
-            this.rech_ref = new System.Windows.Forms.PictureBox();
-            this.off = new System.Windows.Forms.Button();
-            this.metroLabel8 = new MetroFramework.Controls.MetroLabel();
-            this.prix_produit = new MetroFramework.Controls.MetroTextBox();
-            this.metroLabel9 = new MetroFramework.Controls.MetroLabel();
-            this.qt = new MetroFramework.Controls.MetroTextBox();
-            this.metroLabel10 = new MetroFramework.Controls.MetroLabel();
-            this.total_article = new MetroFramework.Controls.MetroTextBox();
-            this.metroLabel11 = new MetroFramework.Controls.MetroLabel();
-            this.libele = new MetroFramework.Controls.MetroTextBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.tva = new MetroFramework.Controls.MetroTextBox();
+            this.btn_clc = new MetroFramework.Controls.MetroButton();
+            this.label3 = new System.Windows.Forms.Label();
             this.txt_montant_total = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.txt_montant_tva = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txt_montant_htva = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.btn_imprimer = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.id_details = new System.Windows.Forms.TextBox();
-            this.btn_clc = new MetroFramework.Controls.MetroButton();
-            this.tva = new MetroFramework.Controls.MetroTextBox();
             this.button3 = new System.Windows.Forms.Button();
+            this.id_details = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.rech_ref)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.groupBox4.SuspendLayout();
             this.groupBox_opération.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.rech_ref)).BeginInit();
             this.groupBox5.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.SuspendLayout();
@@ -188,6 +188,169 @@ namespace baya
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Cordonnées Commande";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // metroLabel11
+            // 
+            this.metroLabel11.AutoSize = true;
+            this.metroLabel11.Location = new System.Drawing.Point(272, 33);
+            this.metroLabel11.Name = "metroLabel11";
+            this.metroLabel11.Size = new System.Drawing.Size(84, 19);
+            this.metroLabel11.TabIndex = 109;
+            this.metroLabel11.Text = "Désignation :";
+            // 
+            // libele
+            // 
+            // 
+            // 
+            // 
+            this.libele.CustomButton.Image = null;
+            this.libele.CustomButton.Location = new System.Drawing.Point(99, 1);
+            this.libele.CustomButton.Name = "";
+            this.libele.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.libele.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.libele.CustomButton.TabIndex = 1;
+            this.libele.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.libele.CustomButton.UseSelectable = true;
+            this.libele.CustomButton.Visible = false;
+            this.libele.Enabled = false;
+            this.libele.Lines = new string[0];
+            this.libele.Location = new System.Drawing.Point(362, 33);
+            this.libele.MaxLength = 32767;
+            this.libele.Name = "libele";
+            this.libele.PasswordChar = '\0';
+            this.libele.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.libele.SelectedText = "";
+            this.libele.SelectionLength = 0;
+            this.libele.SelectionStart = 0;
+            this.libele.ShortcutsEnabled = true;
+            this.libele.Size = new System.Drawing.Size(121, 23);
+            this.libele.TabIndex = 108;
+            this.libele.UseSelectable = true;
+            this.libele.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.libele.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // metroLabel10
+            // 
+            this.metroLabel10.AutoSize = true;
+            this.metroLabel10.Location = new System.Drawing.Point(495, 95);
+            this.metroLabel10.Name = "metroLabel10";
+            this.metroLabel10.Size = new System.Drawing.Size(115, 19);
+            this.metroLabel10.TabIndex = 14;
+            this.metroLabel10.Text = "Prix totale article :";
+            // 
+            // total_article
+            // 
+            // 
+            // 
+            // 
+            this.total_article.CustomButton.Image = null;
+            this.total_article.CustomButton.Location = new System.Drawing.Point(99, 1);
+            this.total_article.CustomButton.Name = "";
+            this.total_article.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.total_article.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.total_article.CustomButton.TabIndex = 1;
+            this.total_article.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.total_article.CustomButton.UseSelectable = true;
+            this.total_article.CustomButton.Visible = false;
+            this.total_article.Enabled = false;
+            this.total_article.Lines = new string[0];
+            this.total_article.Location = new System.Drawing.Point(618, 95);
+            this.total_article.MaxLength = 32767;
+            this.total_article.Name = "total_article";
+            this.total_article.PasswordChar = '\0';
+            this.total_article.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.total_article.SelectedText = "";
+            this.total_article.SelectionLength = 0;
+            this.total_article.SelectionStart = 0;
+            this.total_article.ShortcutsEnabled = true;
+            this.total_article.Size = new System.Drawing.Size(121, 23);
+            this.total_article.TabIndex = 13;
+            this.total_article.UseSelectable = true;
+            this.total_article.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.total_article.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // metroLabel9
+            // 
+            this.metroLabel9.AutoSize = true;
+            this.metroLabel9.Location = new System.Drawing.Point(272, 95);
+            this.metroLabel9.Name = "metroLabel9";
+            this.metroLabel9.Size = new System.Drawing.Size(66, 19);
+            this.metroLabel9.TabIndex = 12;
+            this.metroLabel9.Text = "Quantité :";
+            // 
+            // qt
+            // 
+            // 
+            // 
+            // 
+            this.qt.CustomButton.Image = null;
+            this.qt.CustomButton.Location = new System.Drawing.Point(99, 1);
+            this.qt.CustomButton.Name = "";
+            this.qt.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.qt.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.qt.CustomButton.TabIndex = 1;
+            this.qt.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.qt.CustomButton.UseSelectable = true;
+            this.qt.CustomButton.Visible = false;
+            this.qt.Lines = new string[] {
+        "1"};
+            this.qt.Location = new System.Drawing.Point(362, 95);
+            this.qt.MaxLength = 32767;
+            this.qt.Name = "qt";
+            this.qt.PasswordChar = '\0';
+            this.qt.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.qt.SelectedText = "";
+            this.qt.SelectionLength = 0;
+            this.qt.SelectionStart = 0;
+            this.qt.ShortcutsEnabled = true;
+            this.qt.Size = new System.Drawing.Size(121, 23);
+            this.qt.TabIndex = 11;
+            this.qt.Text = "1";
+            this.qt.UseSelectable = true;
+            this.qt.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.qt.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.qt.TextChanged += new System.EventHandler(this.qt_TextChanged);
+            this.qt.Click += new System.EventHandler(this.qt_Click);
+            // 
+            // metroLabel8
+            // 
+            this.metroLabel8.AutoSize = true;
+            this.metroLabel8.Location = new System.Drawing.Point(495, 33);
+            this.metroLabel8.Name = "metroLabel8";
+            this.metroLabel8.Size = new System.Drawing.Size(86, 19);
+            this.metroLabel8.TabIndex = 10;
+            this.metroLabel8.Text = "Prix 1 Métre :";
+            // 
+            // prix_produit
+            // 
+            // 
+            // 
+            // 
+            this.prix_produit.CustomButton.Image = null;
+            this.prix_produit.CustomButton.Location = new System.Drawing.Point(99, 1);
+            this.prix_produit.CustomButton.Name = "";
+            this.prix_produit.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.prix_produit.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.prix_produit.CustomButton.TabIndex = 1;
+            this.prix_produit.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.prix_produit.CustomButton.UseSelectable = true;
+            this.prix_produit.CustomButton.Visible = false;
+            this.prix_produit.Enabled = false;
+            this.prix_produit.Lines = new string[0];
+            this.prix_produit.Location = new System.Drawing.Point(618, 33);
+            this.prix_produit.MaxLength = 32767;
+            this.prix_produit.Name = "prix_produit";
+            this.prix_produit.PasswordChar = '\0';
+            this.prix_produit.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.prix_produit.SelectedText = "";
+            this.prix_produit.SelectionLength = 0;
+            this.prix_produit.SelectionStart = 0;
+            this.prix_produit.ShortcutsEnabled = true;
+            this.prix_produit.Size = new System.Drawing.Size(121, 23);
+            this.prix_produit.TabIndex = 9;
+            this.prix_produit.UseSelectable = true;
+            this.prix_produit.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.prix_produit.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // combo_epai
             // 
@@ -300,6 +463,7 @@ namespace baya
             this.suiviCommandeToolStripMenuItem.Name = "suiviCommandeToolStripMenuItem";
             this.suiviCommandeToolStripMenuItem.Size = new System.Drawing.Size(110, 20);
             this.suiviCommandeToolStripMenuItem.Text = "Suivi Commande";
+            this.suiviCommandeToolStripMenuItem.Click += new System.EventHandler(this.suiviCommandeToolStripMenuItem_Click);
             // 
             // groupBox3
             // 
@@ -323,6 +487,17 @@ namespace baya
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Client";
             // 
+            // rech_ref
+            // 
+            this.rech_ref.Image = ((System.Drawing.Image)(resources.GetObject("rech_ref.Image")));
+            this.rech_ref.Location = new System.Drawing.Point(41, 21);
+            this.rech_ref.Name = "rech_ref";
+            this.rech_ref.Size = new System.Drawing.Size(36, 30);
+            this.rech_ref.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.rech_ref.TabIndex = 109;
+            this.rech_ref.TabStop = false;
+            this.rech_ref.Click += new System.EventHandler(this.rech_ref_Click);
+            // 
             // dataGridView2
             // 
             this.dataGridView2.AllowUserToAddRows = false;
@@ -336,23 +511,48 @@ namespace baya
             this.dataGridView2.Visible = false;
             this.dataGridView2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellClick);
             // 
-            // metroLabel4
+            // cin
             // 
-            this.metroLabel4.AutoSize = true;
-            this.metroLabel4.Location = new System.Drawing.Point(15, 68);
-            this.metroLabel4.Name = "metroLabel4";
-            this.metroLabel4.Size = new System.Drawing.Size(46, 19);
-            this.metroLabel4.TabIndex = 9;
-            this.metroLabel4.Text = "Nom :";
             // 
-            // metroLabel5
             // 
-            this.metroLabel5.AutoSize = true;
-            this.metroLabel5.Location = new System.Drawing.Point(216, 68);
-            this.metroLabel5.Name = "metroLabel5";
-            this.metroLabel5.Size = new System.Drawing.Size(63, 19);
-            this.metroLabel5.TabIndex = 10;
-            this.metroLabel5.Text = "Prénom :";
+            // 
+            this.cin.CustomButton.Image = null;
+            this.cin.CustomButton.Location = new System.Drawing.Point(95, 1);
+            this.cin.CustomButton.Name = "";
+            this.cin.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.cin.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.cin.CustomButton.TabIndex = 1;
+            this.cin.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.cin.CustomButton.UseSelectable = true;
+            this.cin.CustomButton.Visible = false;
+            this.cin.Enabled = false;
+            this.cin.Lines = new string[0];
+            this.cin.Location = new System.Drawing.Point(300, 151);
+            this.cin.MaxLength = 32767;
+            this.cin.Name = "cin";
+            this.cin.PasswordChar = '\0';
+            this.cin.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.cin.SelectedText = "";
+            this.cin.SelectionLength = 0;
+            this.cin.SelectionStart = 0;
+            this.cin.ShortcutsEnabled = true;
+            this.cin.Size = new System.Drawing.Size(117, 23);
+            this.cin.TabIndex = 16;
+            this.cin.UseSelectable = true;
+            this.cin.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.cin.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // off
+            // 
+            this.off.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("off.BackgroundImage")));
+            this.off.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.off.Location = new System.Drawing.Point(440, 21);
+            this.off.Name = "off";
+            this.off.Size = new System.Drawing.Size(27, 33);
+            this.off.TabIndex = 109;
+            this.off.UseVisualStyleBackColor = true;
+            this.off.Visible = false;
+            this.off.Click += new System.EventHandler(this.off_Click);
             // 
             // metroLabel6
             // 
@@ -363,6 +563,15 @@ namespace baya
             this.metroLabel6.TabIndex = 11;
             this.metroLabel6.Text = "Adresse :";
             // 
+            // metroLabel4
+            // 
+            this.metroLabel4.AutoSize = true;
+            this.metroLabel4.Location = new System.Drawing.Point(15, 68);
+            this.metroLabel4.Name = "metroLabel4";
+            this.metroLabel4.Size = new System.Drawing.Size(46, 19);
+            this.metroLabel4.TabIndex = 9;
+            this.metroLabel4.Text = "Nom :";
+            // 
             // metroLabel7
             // 
             this.metroLabel7.AutoSize = true;
@@ -372,6 +581,46 @@ namespace baya
             this.metroLabel7.TabIndex = 12;
             this.metroLabel7.Text = "Cin :";
             this.metroLabel7.Click += new System.EventHandler(this.metroLabel7_Click);
+            // 
+            // metroLabel5
+            // 
+            this.metroLabel5.AutoSize = true;
+            this.metroLabel5.Location = new System.Drawing.Point(216, 68);
+            this.metroLabel5.Name = "metroLabel5";
+            this.metroLabel5.Size = new System.Drawing.Size(63, 19);
+            this.metroLabel5.TabIndex = 10;
+            this.metroLabel5.Text = "Prénom :";
+            // 
+            // adresse
+            // 
+            // 
+            // 
+            // 
+            this.adresse.CustomButton.Image = null;
+            this.adresse.CustomButton.Location = new System.Drawing.Point(95, 1);
+            this.adresse.CustomButton.Name = "";
+            this.adresse.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.adresse.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.adresse.CustomButton.TabIndex = 1;
+            this.adresse.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.adresse.CustomButton.UseSelectable = true;
+            this.adresse.CustomButton.Visible = false;
+            this.adresse.Enabled = false;
+            this.adresse.Lines = new string[0];
+            this.adresse.Location = new System.Drawing.Point(77, 151);
+            this.adresse.MaxLength = 32767;
+            this.adresse.Name = "adresse";
+            this.adresse.PasswordChar = '\0';
+            this.adresse.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.adresse.SelectedText = "";
+            this.adresse.SelectionLength = 0;
+            this.adresse.SelectionStart = 0;
+            this.adresse.ShortcutsEnabled = true;
+            this.adresse.Size = new System.Drawing.Size(117, 23);
+            this.adresse.TabIndex = 15;
+            this.adresse.UseSelectable = true;
+            this.adresse.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.adresse.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // nom
             // 
@@ -434,68 +683,6 @@ namespace baya
             this.prenom.UseSelectable = true;
             this.prenom.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.prenom.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // adresse
-            // 
-            // 
-            // 
-            // 
-            this.adresse.CustomButton.Image = null;
-            this.adresse.CustomButton.Location = new System.Drawing.Point(95, 1);
-            this.adresse.CustomButton.Name = "";
-            this.adresse.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.adresse.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.adresse.CustomButton.TabIndex = 1;
-            this.adresse.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.adresse.CustomButton.UseSelectable = true;
-            this.adresse.CustomButton.Visible = false;
-            this.adresse.Enabled = false;
-            this.adresse.Lines = new string[0];
-            this.adresse.Location = new System.Drawing.Point(77, 151);
-            this.adresse.MaxLength = 32767;
-            this.adresse.Name = "adresse";
-            this.adresse.PasswordChar = '\0';
-            this.adresse.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.adresse.SelectedText = "";
-            this.adresse.SelectionLength = 0;
-            this.adresse.SelectionStart = 0;
-            this.adresse.ShortcutsEnabled = true;
-            this.adresse.Size = new System.Drawing.Size(117, 23);
-            this.adresse.TabIndex = 15;
-            this.adresse.UseSelectable = true;
-            this.adresse.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.adresse.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // cin
-            // 
-            // 
-            // 
-            // 
-            this.cin.CustomButton.Image = null;
-            this.cin.CustomButton.Location = new System.Drawing.Point(95, 1);
-            this.cin.CustomButton.Name = "";
-            this.cin.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.cin.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.cin.CustomButton.TabIndex = 1;
-            this.cin.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.cin.CustomButton.UseSelectable = true;
-            this.cin.CustomButton.Visible = false;
-            this.cin.Enabled = false;
-            this.cin.Lines = new string[0];
-            this.cin.Location = new System.Drawing.Point(300, 151);
-            this.cin.MaxLength = 32767;
-            this.cin.Name = "cin";
-            this.cin.PasswordChar = '\0';
-            this.cin.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.cin.SelectedText = "";
-            this.cin.SelectionLength = 0;
-            this.cin.SelectionStart = 0;
-            this.cin.ShortcutsEnabled = true;
-            this.cin.Size = new System.Drawing.Size(117, 23);
-            this.cin.TabIndex = 16;
-            this.cin.UseSelectable = true;
-            this.cin.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.cin.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // metroDateTime1
             // 
@@ -572,191 +759,6 @@ namespace baya
             this.btn_ajouter.UseVisualStyleBackColor = false;
             this.btn_ajouter.Click += new System.EventHandler(this.btn_ajouter_Click);
             // 
-            // rech_ref
-            // 
-            this.rech_ref.Image = ((System.Drawing.Image)(resources.GetObject("rech_ref.Image")));
-            this.rech_ref.Location = new System.Drawing.Point(41, 21);
-            this.rech_ref.Name = "rech_ref";
-            this.rech_ref.Size = new System.Drawing.Size(36, 30);
-            this.rech_ref.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.rech_ref.TabIndex = 109;
-            this.rech_ref.TabStop = false;
-            this.rech_ref.Click += new System.EventHandler(this.rech_ref_Click);
-            // 
-            // off
-            // 
-            this.off.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("off.BackgroundImage")));
-            this.off.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.off.Location = new System.Drawing.Point(440, 21);
-            this.off.Name = "off";
-            this.off.Size = new System.Drawing.Size(27, 33);
-            this.off.TabIndex = 109;
-            this.off.UseVisualStyleBackColor = true;
-            this.off.Visible = false;
-            this.off.Click += new System.EventHandler(this.off_Click);
-            // 
-            // metroLabel8
-            // 
-            this.metroLabel8.AutoSize = true;
-            this.metroLabel8.Location = new System.Drawing.Point(495, 33);
-            this.metroLabel8.Name = "metroLabel8";
-            this.metroLabel8.Size = new System.Drawing.Size(86, 19);
-            this.metroLabel8.TabIndex = 10;
-            this.metroLabel8.Text = "Prix 1 Métre :";
-            // 
-            // prix_produit
-            // 
-            // 
-            // 
-            // 
-            this.prix_produit.CustomButton.Image = null;
-            this.prix_produit.CustomButton.Location = new System.Drawing.Point(99, 1);
-            this.prix_produit.CustomButton.Name = "";
-            this.prix_produit.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.prix_produit.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.prix_produit.CustomButton.TabIndex = 1;
-            this.prix_produit.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.prix_produit.CustomButton.UseSelectable = true;
-            this.prix_produit.CustomButton.Visible = false;
-            this.prix_produit.Enabled = false;
-            this.prix_produit.Lines = new string[0];
-            this.prix_produit.Location = new System.Drawing.Point(618, 33);
-            this.prix_produit.MaxLength = 32767;
-            this.prix_produit.Name = "prix_produit";
-            this.prix_produit.PasswordChar = '\0';
-            this.prix_produit.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.prix_produit.SelectedText = "";
-            this.prix_produit.SelectionLength = 0;
-            this.prix_produit.SelectionStart = 0;
-            this.prix_produit.ShortcutsEnabled = true;
-            this.prix_produit.Size = new System.Drawing.Size(121, 23);
-            this.prix_produit.TabIndex = 9;
-            this.prix_produit.UseSelectable = true;
-            this.prix_produit.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.prix_produit.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // metroLabel9
-            // 
-            this.metroLabel9.AutoSize = true;
-            this.metroLabel9.Location = new System.Drawing.Point(272, 95);
-            this.metroLabel9.Name = "metroLabel9";
-            this.metroLabel9.Size = new System.Drawing.Size(66, 19);
-            this.metroLabel9.TabIndex = 12;
-            this.metroLabel9.Text = "Quantité :";
-            // 
-            // qt
-            // 
-            // 
-            // 
-            // 
-            this.qt.CustomButton.Image = null;
-            this.qt.CustomButton.Location = new System.Drawing.Point(99, 1);
-            this.qt.CustomButton.Name = "";
-            this.qt.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.qt.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.qt.CustomButton.TabIndex = 1;
-            this.qt.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.qt.CustomButton.UseSelectable = true;
-            this.qt.CustomButton.Visible = false;
-            this.qt.Lines = new string[] {
-        "1"};
-            this.qt.Location = new System.Drawing.Point(362, 95);
-            this.qt.MaxLength = 32767;
-            this.qt.Name = "qt";
-            this.qt.PasswordChar = '\0';
-            this.qt.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.qt.SelectedText = "";
-            this.qt.SelectionLength = 0;
-            this.qt.SelectionStart = 0;
-            this.qt.ShortcutsEnabled = true;
-            this.qt.Size = new System.Drawing.Size(121, 23);
-            this.qt.TabIndex = 11;
-            this.qt.Text = "1";
-            this.qt.UseSelectable = true;
-            this.qt.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.qt.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            this.qt.TextChanged += new System.EventHandler(this.qt_TextChanged);
-            // 
-            // metroLabel10
-            // 
-            this.metroLabel10.AutoSize = true;
-            this.metroLabel10.Location = new System.Drawing.Point(495, 95);
-            this.metroLabel10.Name = "metroLabel10";
-            this.metroLabel10.Size = new System.Drawing.Size(115, 19);
-            this.metroLabel10.TabIndex = 14;
-            this.metroLabel10.Text = "Prix totale article :";
-            // 
-            // total_article
-            // 
-            // 
-            // 
-            // 
-            this.total_article.CustomButton.Image = null;
-            this.total_article.CustomButton.Location = new System.Drawing.Point(99, 1);
-            this.total_article.CustomButton.Name = "";
-            this.total_article.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.total_article.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.total_article.CustomButton.TabIndex = 1;
-            this.total_article.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.total_article.CustomButton.UseSelectable = true;
-            this.total_article.CustomButton.Visible = false;
-            this.total_article.Enabled = false;
-            this.total_article.Lines = new string[0];
-            this.total_article.Location = new System.Drawing.Point(618, 95);
-            this.total_article.MaxLength = 32767;
-            this.total_article.Name = "total_article";
-            this.total_article.PasswordChar = '\0';
-            this.total_article.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.total_article.SelectedText = "";
-            this.total_article.SelectionLength = 0;
-            this.total_article.SelectionStart = 0;
-            this.total_article.ShortcutsEnabled = true;
-            this.total_article.Size = new System.Drawing.Size(121, 23);
-            this.total_article.TabIndex = 13;
-            this.total_article.UseSelectable = true;
-            this.total_article.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.total_article.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // metroLabel11
-            // 
-            this.metroLabel11.AutoSize = true;
-            this.metroLabel11.Location = new System.Drawing.Point(272, 33);
-            this.metroLabel11.Name = "metroLabel11";
-            this.metroLabel11.Size = new System.Drawing.Size(84, 19);
-            this.metroLabel11.TabIndex = 109;
-            this.metroLabel11.Text = "Désignation :";
-            // 
-            // libele
-            // 
-            // 
-            // 
-            // 
-            this.libele.CustomButton.Image = null;
-            this.libele.CustomButton.Location = new System.Drawing.Point(99, 1);
-            this.libele.CustomButton.Name = "";
-            this.libele.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.libele.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.libele.CustomButton.TabIndex = 1;
-            this.libele.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.libele.CustomButton.UseSelectable = true;
-            this.libele.CustomButton.Visible = false;
-            this.libele.Enabled = false;
-            this.libele.Lines = new string[0];
-            this.libele.Location = new System.Drawing.Point(362, 33);
-            this.libele.MaxLength = 32767;
-            this.libele.Name = "libele";
-            this.libele.PasswordChar = '\0';
-            this.libele.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.libele.SelectedText = "";
-            this.libele.SelectionLength = 0;
-            this.libele.SelectionStart = 0;
-            this.libele.ShortcutsEnabled = true;
-            this.libele.Size = new System.Drawing.Size(121, 23);
-            this.libele.TabIndex = 108;
-            this.libele.UseSelectable = true;
-            this.libele.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.libele.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
             // groupBox5
             // 
             this.groupBox5.BackColor = System.Drawing.Color.White;
@@ -777,6 +779,62 @@ namespace baya
             this.groupBox5.TabIndex = 108;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Total";
+            // 
+            // tva
+            // 
+            // 
+            // 
+            // 
+            this.tva.CustomButton.Image = null;
+            this.tva.CustomButton.Location = new System.Drawing.Point(13, 1);
+            this.tva.CustomButton.Name = "";
+            this.tva.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.tva.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.tva.CustomButton.TabIndex = 1;
+            this.tva.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.tva.CustomButton.UseSelectable = true;
+            this.tva.CustomButton.Visible = false;
+            this.tva.Lines = new string[] {
+        "0"};
+            this.tva.Location = new System.Drawing.Point(350, 25);
+            this.tva.MaxLength = 32767;
+            this.tva.Name = "tva";
+            this.tva.PasswordChar = '\0';
+            this.tva.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.tva.SelectedText = "";
+            this.tva.SelectionLength = 0;
+            this.tva.SelectionStart = 0;
+            this.tva.ShortcutsEnabled = true;
+            this.tva.Size = new System.Drawing.Size(35, 23);
+            this.tva.TabIndex = 80;
+            this.tva.Text = "0";
+            this.tva.UseSelectable = true;
+            this.tva.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.tva.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.tva.TextChanged += new System.EventHandler(this.tva_TextChanged);
+            this.tva.Click += new System.EventHandler(this.tva_Click);
+            // 
+            // btn_clc
+            // 
+            this.btn_clc.Location = new System.Drawing.Point(437, 73);
+            this.btn_clc.Name = "btn_clc";
+            this.btn_clc.Size = new System.Drawing.Size(104, 29);
+            this.btn_clc.TabIndex = 79;
+            this.btn_clc.Text = "Calculer";
+            this.btn_clc.UseSelectable = true;
+            this.btn_clc.Click += new System.EventHandler(this.btn_clc_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(332, 24);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(88, 22);
+            this.label3.TabIndex = 78;
+            this.label3.Text = "*          %";
             // 
             // txt_montant_total
             // 
@@ -844,18 +902,6 @@ namespace baya
             this.label18.TabIndex = 65;
             this.label18.Text = "Montant totale HTVA :";
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(332, 24);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(88, 22);
-            this.label3.TabIndex = 78;
-            this.label3.Text = "*          %";
-            // 
             // btn_imprimer
             // 
             this.btn_imprimer.BackColor = System.Drawing.Color.White;
@@ -905,6 +951,7 @@ namespace baya
             this.button2.TabIndex = 111;
             this.button2.Text = "         Ennregistrer ";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // groupBox6
             // 
@@ -922,59 +969,6 @@ namespace baya
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Opération Commande";
             // 
-            // id_details
-            // 
-            this.id_details.Enabled = false;
-            this.id_details.Location = new System.Drawing.Point(29, 518);
-            this.id_details.Name = "id_details";
-            this.id_details.Size = new System.Drawing.Size(57, 20);
-            this.id_details.TabIndex = 113;
-            this.id_details.Visible = false;
-            // 
-            // btn_clc
-            // 
-            this.btn_clc.Location = new System.Drawing.Point(437, 73);
-            this.btn_clc.Name = "btn_clc";
-            this.btn_clc.Size = new System.Drawing.Size(104, 29);
-            this.btn_clc.TabIndex = 79;
-            this.btn_clc.Text = "Calculer";
-            this.btn_clc.UseSelectable = true;
-            this.btn_clc.Click += new System.EventHandler(this.btn_clc_Click);
-            // 
-            // tva
-            // 
-            // 
-            // 
-            // 
-            this.tva.CustomButton.Image = null;
-            this.tva.CustomButton.Location = new System.Drawing.Point(13, 1);
-            this.tva.CustomButton.Name = "";
-            this.tva.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.tva.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.tva.CustomButton.TabIndex = 1;
-            this.tva.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.tva.CustomButton.UseSelectable = true;
-            this.tva.CustomButton.Visible = false;
-            this.tva.Lines = new string[] {
-        "0"};
-            this.tva.Location = new System.Drawing.Point(350, 25);
-            this.tva.MaxLength = 32767;
-            this.tva.Name = "tva";
-            this.tva.PasswordChar = '\0';
-            this.tva.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.tva.SelectedText = "";
-            this.tva.SelectionLength = 0;
-            this.tva.SelectionStart = 0;
-            this.tva.ShortcutsEnabled = true;
-            this.tva.Size = new System.Drawing.Size(35, 23);
-            this.tva.TabIndex = 80;
-            this.tva.Text = "0";
-            this.tva.UseSelectable = true;
-            this.tva.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.tva.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            this.tva.TextChanged += new System.EventHandler(this.tva_TextChanged);
-            this.tva.Click += new System.EventHandler(this.tva_Click);
-            // 
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.White;
@@ -990,6 +984,15 @@ namespace baya
             this.button3.Text = "        Vider";
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // id_details
+            // 
+            this.id_details.Enabled = false;
+            this.id_details.Location = new System.Drawing.Point(29, 518);
+            this.id_details.Name = "id_details";
+            this.id_details.Size = new System.Drawing.Size(57, 20);
+            this.id_details.TabIndex = 113;
+            this.id_details.Visible = false;
             // 
             // Acceuil
             // 
@@ -1021,11 +1024,11 @@ namespace baya
             this.menuStrip1.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.rech_ref)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             this.groupBox4.ResumeLayout(false);
             this.groupBox_opération.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.rech_ref)).EndInit();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
             this.groupBox6.ResumeLayout(false);

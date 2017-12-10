@@ -223,5 +223,12 @@ namespace baya
         {
 
         }
+
+        private void suiviCommandeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Commande ac = new Commande();
+            ac.Show();
+        }
     }
 }

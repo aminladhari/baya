@@ -37,7 +37,6 @@
             this.gestionDesClientsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.quiterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.suiviCommandeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.id = new System.Windows.Forms.TextBox();
             this.metroButton1 = new MetroFramework.Controls.MetroButton();
             this.btn_delete = new MetroFramework.Controls.MetroButton();
@@ -48,6 +47,9 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.metroTextBox2 = new MetroFramework.Controls.MetroTextBox();
             this.metroTextBox1 = new MetroFramework.Controls.MetroTextBox();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toutesLesCommandesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.détailsCommandeParClientToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -58,7 +60,7 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.acceuilToolStripMenuItem,
             this.gestionMarbreToolStripMenuItem,
-            this.suiviCommandeToolStripMenuItem});
+            this.toolStripMenuItem1});
             this.menuStrip1.Location = new System.Drawing.Point(20, 60);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
@@ -117,13 +119,6 @@
             this.quiterToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
             this.quiterToolStripMenuItem.Text = "Quiter";
             this.quiterToolStripMenuItem.Click += new System.EventHandler(this.quiterToolStripMenuItem_Click);
-            // 
-            // suiviCommandeToolStripMenuItem
-            // 
-            this.suiviCommandeToolStripMenuItem.Name = "suiviCommandeToolStripMenuItem";
-            this.suiviCommandeToolStripMenuItem.Size = new System.Drawing.Size(110, 20);
-            this.suiviCommandeToolStripMenuItem.Text = "Suivi Commande";
-            this.suiviCommandeToolStripMenuItem.Click += new System.EventHandler(this.suiviCommandeToolStripMenuItem_Click);
             // 
             // id
             // 
@@ -273,6 +268,28 @@
             this.metroTextBox1.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.metroTextBox1.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toutesLesCommandesToolStripMenuItem,
+            this.détailsCommandeParClientToolStripMenuItem});
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(47, 20);
+            this.toolStripMenuItem1.Text = "Suivi ";
+            // 
+            // toutesLesCommandesToolStripMenuItem
+            // 
+            this.toutesLesCommandesToolStripMenuItem.Name = "toutesLesCommandesToolStripMenuItem";
+            this.toutesLesCommandesToolStripMenuItem.Size = new System.Drawing.Size(225, 22);
+            this.toutesLesCommandesToolStripMenuItem.Text = "Toutes les commandes";
+            this.toutesLesCommandesToolStripMenuItem.Click += new System.EventHandler(this.toutesLesCommandesToolStripMenuItem_Click);
+            // 
+            // détailsCommandeParClientToolStripMenuItem
+            // 
+            this.détailsCommandeParClientToolStripMenuItem.Name = "détailsCommandeParClientToolStripMenuItem";
+            this.détailsCommandeParClientToolStripMenuItem.Size = new System.Drawing.Size(225, 22);
+            this.détailsCommandeParClientToolStripMenuItem.Text = "Détails commande par client";
+            // 
             // Marbre
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -312,7 +329,6 @@
         private System.Windows.Forms.ToolStripMenuItem gestionDesClientsToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripMenuItem quiterToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem suiviCommandeToolStripMenuItem;
         private System.Windows.Forms.TextBox id;
         private MetroFramework.Controls.MetroButton metroButton1;
         private MetroFramework.Controls.MetroButton btn_delete;
@@ -323,5 +339,8 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private MetroFramework.Controls.MetroTextBox metroTextBox2;
         private MetroFramework.Controls.MetroTextBox metroTextBox1;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem toutesLesCommandesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem détailsCommandeParClientToolStripMenuItem;
     }
 }

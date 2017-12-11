@@ -238,6 +238,10 @@ namespace baya
                     Connexion.cnx.Open();
                     Connexion.cmd.CommandText = "insert into details(type,metrage,epaisseur,designation,quantite,prix,prix_tt,cin)values('" + type.Text.ToString() + "','" + txtbox_metrage.Text.ToString() + "','" + combo_epai.Text.ToString() + "','" + libele.Text.ToString() + "','" + qt.Text.ToString() + "','" + prix_produit.Text.ToString() + "','" + total_article.Text.ToString() + "','" + cin.Text.ToString() + "')";
                     Connexion.cmd.ExecuteNonQuery();
+                    Connexion.cnx.Close();
+                    Connexion.cnx.Open();
+                    Connexion.cmd.CommandText = "insert into detail_commande(type,metrage,epaisseur,designation,quantite,prix,prix_tt,cin)values('" + type.Text.ToString() + "','" + txtbox_metrage.Text.ToString() + "','" + combo_epai.Text.ToString() + "','" + libele.Text.ToString() + "','" + qt.Text.ToString() + "','" + prix_produit.Text.ToString() + "','" + total_article.Text.ToString() + "','" + cin.Text.ToString() + "')";
+                    Connexion.cmd.ExecuteNonQuery();
 
                     //chargement de datagridview
                     Connexion.cmd.CommandText = "Select * from details";
@@ -360,7 +364,7 @@ namespace baya
         private void button2_Click(object sender, EventArgs e)
         {
             
-            if (txt_montant_htva.Text == "" || txt_montant_total.Text == "" || txt_montant_tva.Text == "" )
+            if (txt_montant_htva.Text == "" || txt_montant_total.Text == "" || txt_montant_tva.Text == "" || cin.Text == "")
             {
                 MessageBox.Show("vérifier les champs !!", "Alerte champs vides", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 
@@ -424,6 +428,15 @@ namespace baya
 
         private void qt_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void toutesLesCommandesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            this.Hide();
+            Commande ac = new Commande();
+            ac.Show();
 
         }
     }

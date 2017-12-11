@@ -90,6 +90,8 @@ namespace baya
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.button3 = new System.Windows.Forms.Button();
             this.id_details = new System.Windows.Forms.TextBox();
+            this.toutesLesCommandesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.détailsCommandeParClientToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -460,9 +462,12 @@ namespace baya
             // 
             // suiviCommandeToolStripMenuItem
             // 
+            this.suiviCommandeToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toutesLesCommandesToolStripMenuItem,
+            this.détailsCommandeParClientToolStripMenuItem});
             this.suiviCommandeToolStripMenuItem.Name = "suiviCommandeToolStripMenuItem";
-            this.suiviCommandeToolStripMenuItem.Size = new System.Drawing.Size(110, 20);
-            this.suiviCommandeToolStripMenuItem.Text = "Suivi Commande";
+            this.suiviCommandeToolStripMenuItem.Size = new System.Drawing.Size(47, 20);
+            this.suiviCommandeToolStripMenuItem.Text = "Suivi ";
             this.suiviCommandeToolStripMenuItem.Click += new System.EventHandler(this.suiviCommandeToolStripMenuItem_Click);
             // 
             // groupBox3
@@ -994,6 +999,19 @@ namespace baya
             this.id_details.TabIndex = 113;
             this.id_details.Visible = false;
             // 
+            // toutesLesCommandesToolStripMenuItem
+            // 
+            this.toutesLesCommandesToolStripMenuItem.Name = "toutesLesCommandesToolStripMenuItem";
+            this.toutesLesCommandesToolStripMenuItem.Size = new System.Drawing.Size(225, 22);
+            this.toutesLesCommandesToolStripMenuItem.Text = "Toutes les commandes";
+            this.toutesLesCommandesToolStripMenuItem.Click += new System.EventHandler(this.toutesLesCommandesToolStripMenuItem_Click);
+            // 
+            // détailsCommandeParClientToolStripMenuItem
+            // 
+            this.détailsCommandeParClientToolStripMenuItem.Name = "détailsCommandeParClientToolStripMenuItem";
+            this.détailsCommandeParClientToolStripMenuItem.Size = new System.Drawing.Size(225, 22);
+            this.détailsCommandeParClientToolStripMenuItem.Text = "Détails commande par client";
+            // 
             // Acceuil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1098,5 +1116,7 @@ namespace baya
         private MetroFramework.Controls.MetroButton btn_clc;
         private MetroFramework.Controls.MetroTextBox tva;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.ToolStripMenuItem toutesLesCommandesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem détailsCommandeParClientToolStripMenuItem;
     }
 }

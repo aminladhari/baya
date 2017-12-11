@@ -250,5 +250,13 @@ namespace baya
 			Commande ac = new Commande();
 			ac.Show();
 		}
+
+		private void toutesLesCommandesToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+
+			this.Hide();
+			Commande ac = new Commande();
+			ac.Show();
+		}
 	}
 }

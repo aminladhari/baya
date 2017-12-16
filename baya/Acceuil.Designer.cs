@@ -41,7 +41,6 @@ namespace baya
             this.metroLabel10 = new MetroFramework.Controls.MetroLabel();
             this.total_article = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel9 = new MetroFramework.Controls.MetroLabel();
-            this.qt = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel8 = new MetroFramework.Controls.MetroLabel();
             this.prix_produit = new MetroFramework.Controls.MetroTextBox();
             this.combo_epai = new MetroFramework.Controls.MetroComboBox();
@@ -56,6 +55,8 @@ namespace baya
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.quiterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.suiviCommandeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toutesLesCommandesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.détailsCommandeParClientToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.rech_ref = new System.Windows.Forms.PictureBox();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
@@ -90,8 +91,7 @@ namespace baya
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.button3 = new System.Windows.Forms.Button();
             this.id_details = new System.Windows.Forms.TextBox();
-            this.toutesLesCommandesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.détailsCommandeParClientToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -169,12 +169,12 @@ namespace baya
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Controls.Add(this.metroLabel11);
             this.groupBox1.Controls.Add(this.libele);
             this.groupBox1.Controls.Add(this.metroLabel10);
             this.groupBox1.Controls.Add(this.total_article);
             this.groupBox1.Controls.Add(this.metroLabel9);
-            this.groupBox1.Controls.Add(this.qt);
             this.groupBox1.Controls.Add(this.metroLabel8);
             this.groupBox1.Controls.Add(this.prix_produit);
             this.groupBox1.Controls.Add(this.combo_epai);
@@ -279,40 +279,6 @@ namespace baya
             this.metroLabel9.Size = new System.Drawing.Size(66, 19);
             this.metroLabel9.TabIndex = 12;
             this.metroLabel9.Text = "Quantité :";
-            // 
-            // qt
-            // 
-            // 
-            // 
-            // 
-            this.qt.CustomButton.Image = null;
-            this.qt.CustomButton.Location = new System.Drawing.Point(99, 1);
-            this.qt.CustomButton.Name = "";
-            this.qt.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.qt.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.qt.CustomButton.TabIndex = 1;
-            this.qt.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.qt.CustomButton.UseSelectable = true;
-            this.qt.CustomButton.Visible = false;
-            this.qt.Lines = new string[] {
-        "1"};
-            this.qt.Location = new System.Drawing.Point(362, 95);
-            this.qt.MaxLength = 32767;
-            this.qt.Name = "qt";
-            this.qt.PasswordChar = '\0';
-            this.qt.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.qt.SelectedText = "";
-            this.qt.SelectionLength = 0;
-            this.qt.SelectionStart = 0;
-            this.qt.ShortcutsEnabled = true;
-            this.qt.Size = new System.Drawing.Size(121, 23);
-            this.qt.TabIndex = 11;
-            this.qt.Text = "1";
-            this.qt.UseSelectable = true;
-            this.qt.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.qt.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            this.qt.TextChanged += new System.EventHandler(this.qt_TextChanged);
-            this.qt.Click += new System.EventHandler(this.qt_Click);
             // 
             // metroLabel8
             // 
@@ -469,6 +435,20 @@ namespace baya
             this.suiviCommandeToolStripMenuItem.Size = new System.Drawing.Size(47, 20);
             this.suiviCommandeToolStripMenuItem.Text = "Suivi ";
             this.suiviCommandeToolStripMenuItem.Click += new System.EventHandler(this.suiviCommandeToolStripMenuItem_Click);
+            // 
+            // toutesLesCommandesToolStripMenuItem
+            // 
+            this.toutesLesCommandesToolStripMenuItem.Name = "toutesLesCommandesToolStripMenuItem";
+            this.toutesLesCommandesToolStripMenuItem.Size = new System.Drawing.Size(225, 22);
+            this.toutesLesCommandesToolStripMenuItem.Text = "Toutes les commandes";
+            this.toutesLesCommandesToolStripMenuItem.Click += new System.EventHandler(this.toutesLesCommandesToolStripMenuItem_Click);
+            // 
+            // détailsCommandeParClientToolStripMenuItem
+            // 
+            this.détailsCommandeParClientToolStripMenuItem.Name = "détailsCommandeParClientToolStripMenuItem";
+            this.détailsCommandeParClientToolStripMenuItem.Size = new System.Drawing.Size(225, 22);
+            this.détailsCommandeParClientToolStripMenuItem.Text = "Détails commande par client";
+            this.détailsCommandeParClientToolStripMenuItem.Click += new System.EventHandler(this.détailsCommandeParClientToolStripMenuItem_Click);
             // 
             // groupBox3
             // 
@@ -999,18 +979,15 @@ namespace baya
             this.id_details.TabIndex = 113;
             this.id_details.Visible = false;
             // 
-            // toutesLesCommandesToolStripMenuItem
+            // textBox1
             // 
-            this.toutesLesCommandesToolStripMenuItem.Name = "toutesLesCommandesToolStripMenuItem";
-            this.toutesLesCommandesToolStripMenuItem.Size = new System.Drawing.Size(225, 22);
-            this.toutesLesCommandesToolStripMenuItem.Text = "Toutes les commandes";
-            this.toutesLesCommandesToolStripMenuItem.Click += new System.EventHandler(this.toutesLesCommandesToolStripMenuItem_Click);
-            // 
-            // détailsCommandeParClientToolStripMenuItem
-            // 
-            this.détailsCommandeParClientToolStripMenuItem.Name = "détailsCommandeParClientToolStripMenuItem";
-            this.détailsCommandeParClientToolStripMenuItem.Size = new System.Drawing.Size(225, 22);
-            this.détailsCommandeParClientToolStripMenuItem.Text = "Détails commande par client";
+            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(362, 95);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(121, 23);
+            this.textBox1.TabIndex = 110;
+            this.textBox1.Text = "1";
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // Acceuil
             // 
@@ -1097,7 +1074,6 @@ namespace baya
         private MetroFramework.Controls.MetroLabel metroLabel10;
         private MetroFramework.Controls.MetroTextBox total_article;
         private MetroFramework.Controls.MetroLabel metroLabel9;
-        private MetroFramework.Controls.MetroTextBox qt;
         private MetroFramework.Controls.MetroLabel metroLabel8;
         private MetroFramework.Controls.MetroTextBox prix_produit;
         private System.Windows.Forms.GroupBox groupBox5;
@@ -1118,5 +1094,6 @@ namespace baya
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.ToolStripMenuItem toutesLesCommandesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem détailsCommandeParClientToolStripMenuItem;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

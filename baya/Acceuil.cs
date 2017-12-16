@@ -9,6 +9,8 @@ namespace baya
     public partial class Acceuil : MetroForm
 
     {
+        string aa;
+        string bb;
         Chargementfichier x = new Chargementfichier();
         Chargementfichier y = new Chargementfichier();
         Chargementfichier z = new Chargementfichier();
@@ -28,6 +30,7 @@ namespace baya
             y.ChargementComboBox("select valeur from epaisseur", combo_epai);
             z.ChargementComboBox("select type from typemarbre", type);
             chargementclient();
+            
             chargementdetail();
 
 
@@ -163,13 +166,25 @@ namespace baya
         private void gestionMarbreToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Granit ac = new Granit();
+            Marbre ac = new Marbre();
             ac.Show();
         }
 
         private void combo_epai_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (combo_epai.SelectedItem.ToString() == "2")
+            {
+                prix_produit.Text = aa;
+            }
+            else if (combo_epai.SelectedItem.ToString() == "3")
+            {
+                prix_produit.Text = bb;
 
+            }
+            else
+            {
+                MessageBox.Show("Veuillez choisir un épaisseur", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void metroLabel7_Click(object sender, EventArgs e)
@@ -206,7 +221,9 @@ namespace baya
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             libele.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
-            prix_produit.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+            aa= dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString(); 
+            bb= dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
+
 
         }
 
@@ -223,10 +240,11 @@ namespace baya
         private void btn_ajouter_Click(object sender, EventArgs e)
         {
             int o;
-            if ((int.TryParse(txtbox_metrage.Text, out o)) || txtbox_metrage.Text == "" || libele.Text == "" || qt.Text == "" || cin.Text == "" || prix_produit.Text == "")
+            if ((int.TryParse(txtbox_metrage.Text, out o)) || txtbox_metrage.Text == "" || libele.Text == "" || textBox1.Text == "" || cin.Text == "" || prix_produit.Text == "")
             {
                 MessageBox.Show("vérifier les champs !!", "Alerte champs vides", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                MessageBox.Show("Champs métrage non valide, il doit étre numérique ", "Alerte", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Champs métrage non valide, il doit étre numérique et contient une virgule ", "Alerte", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("vérifier Cordonnées clients ", "Alerte", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
@@ -236,11 +254,11 @@ namespace baya
 
                     Connexion.cnx.Close();
                     Connexion.cnx.Open();
-                    Connexion.cmd.CommandText = "insert into details(type,metrage,epaisseur,designation,quantite,prix,prix_tt,cin)values('" + type.Text.ToString() + "','" + txtbox_metrage.Text.ToString() + "','" + combo_epai.Text.ToString() + "','" + libele.Text.ToString() + "','" + qt.Text.ToString() + "','" + prix_produit.Text.ToString() + "','" + total_article.Text.ToString() + "','" + cin.Text.ToString() + "')";
+                    Connexion.cmd.CommandText = "insert into details(type,metrage,epaisseur,designation,quantite,prix,prix_tt,cin)values('" + type.Text.ToString() + "','" + txtbox_metrage.Text.ToString() + "','" + combo_epai.Text.ToString() + "','" + libele.Text.ToString() + "','" + textBox1.Text.ToString() + "','" + prix_produit.Text.ToString() + "','" + total_article.Text.ToString() + "','" + cin.Text.ToString() + "')";
                     Connexion.cmd.ExecuteNonQuery();
                     Connexion.cnx.Close();
                     Connexion.cnx.Open();
-                    Connexion.cmd.CommandText = "insert into detail_commande(type,metrage,epaisseur,designation,quantite,prix,prix_tt,cin)values('" + type.Text.ToString() + "','" + txtbox_metrage.Text.ToString() + "','" + combo_epai.Text.ToString() + "','" + libele.Text.ToString() + "','" + qt.Text.ToString() + "','" + prix_produit.Text.ToString() + "','" + total_article.Text.ToString() + "','" + cin.Text.ToString() + "')";
+                    Connexion.cmd.CommandText = "insert into detail_commande(type,metrage,epaisseur,designation,quantite,prix,prix_tt,cin)values('" + type.Text.ToString() + "','" + txtbox_metrage.Text.ToString() + "','" + combo_epai.Text.ToString() + "','" + libele.Text.ToString() + "','" + textBox1.Text.ToString() + "','" + prix_produit.Text.ToString() + "','" + total_article.Text.ToString() + "','" + cin.Text.ToString() + "')";
                     Connexion.cmd.ExecuteNonQuery();
 
                     //chargement de datagridview
@@ -280,7 +298,7 @@ namespace baya
 
         private void qt_TextChanged(object sender, EventArgs e)
         {
-            total_article.Text = (float.Parse(txtbox_metrage.Text.ToString()) * float.Parse(prix_produit.Text.ToString()) * float.Parse(qt.Text.ToString())).ToString("#.##");
+            total_article.Text = (float.Parse(txtbox_metrage.Text.ToString()) * float.Parse(prix_produit.Text.ToString()) * float.Parse(textBox1.Text.ToString())).ToString("#.##");
         }
 
         private void btn_supprimer_Click(object sender, EventArgs e)
@@ -421,9 +439,7 @@ namespace baya
 
         private void suiviCommandeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Commande ac = new Commande();
-            ac.Show();
+           
         }
 
         private void qt_Click(object sender, EventArgs e)
@@ -438,6 +454,16 @@ namespace baya
             Commande ac = new Commande();
             ac.Show();
 
+        }
+
+        private void détailsCommandeParClientToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            total_article.Text = (float.Parse(txtbox_metrage.Text.ToString()) * float.Parse(prix_produit.Text.ToString()) * float.Parse(textBox1.Text.ToString())).ToString("#.##");
         }
     }
 }

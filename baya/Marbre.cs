@@ -75,6 +75,7 @@ namespace baya
         {
             metroTextBox1.Text = "";
             metroTextBox2.Text = "";
+            metroTextBox3.Text = "";
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -87,7 +88,7 @@ namespace baya
         private void btn_add_Click(object sender, EventArgs e)
         {
             int o;
-            if ((metroTextBox1.Text == "") || (metroTextBox2.Text == "") || (int.TryParse(metroTextBox2.Text, out o) == false))
+            if ((metroTextBox1.Text == "") || (metroTextBox2.Text == "") || (metroTextBox3.Text == "") || (int.TryParse(metroTextBox2.Text, out o) == false))
             {
                 MessageBox.Show("Veuillez remplir les champs", "Champ(s)vide", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                 MessageBox.Show("Champs non valide doit étre numérique", "Alerte", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -96,12 +97,12 @@ namespace baya
                 metroTextBox2.Focus();
 
 
-                if ((metroTextBox1.Text == "") && (metroTextBox2.Text == ""))
+                if ((metroTextBox1.Text == "") && (metroTextBox2.Text == "") && (metroTextBox3.Text == ""))
                 {
 
                     metroTextBox1.Focus();
                     metroTextBox2.Focus();
-
+                    metroTextBox3.Focus();
 
 
                 }
@@ -133,7 +134,7 @@ namespace baya
                         lire.Close();
 
 
-                        Connexion.cmd.CommandText = "insert into marbre(libele,prix)values('" + metroTextBox1.Text.ToString() + "','" + metroTextBox2.Text.ToString() + "')";
+                        Connexion.cmd.CommandText = "insert into marbre(libele,prix_2cm,prix_3cm)values('" + metroTextBox1.Text.ToString() + "','" + metroTextBox2.Text.ToString() + "','" + metroTextBox3.Text.ToString() + "')";
                         Connexion.cmd.ExecuteNonQuery();
 
 
@@ -167,7 +168,7 @@ namespace baya
 
         private void btn_update_Click(object sender, EventArgs e)
         {
-            if ((metroTextBox1.Text == "") || (metroTextBox2.Text == ""))
+            if ((metroTextBox1.Text == "") || (metroTextBox2.Text == "") || (metroTextBox3.Text == ""))
             {
                 MessageBox.Show("Veuillez remplir les champs", "Champ(s)vide", MessageBoxButtons.OK, MessageBoxIcon.Stop);
             }
@@ -175,18 +176,19 @@ namespace baya
             {
                 Connexion.cnx.Close();
                 Connexion.cnx.Open();
-                Connexion.cmd.CommandText = "update marbre set libele ='" + metroTextBox1.Text.ToString() + "',prix='" + metroTextBox2.Text.ToString() + "' where id_marbre ='" + id.Text.ToString() + "' ";
+                Connexion.cmd.CommandText = "update marbre set libele ='" + metroTextBox1.Text.ToString() + "',prix_2cm='" + metroTextBox2.Text.ToString() + "',prix_3cm='"+ metroTextBox3.Text.ToString() + "' where id_marbre ='" + id.Text.ToString() + "' ";
                 Connexion.cmd.ExecuteNonQuery();
                 MessageBox.Show("Type modifié(e) avec succé", "Modification produit", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 chargementgrid();
                 metroTextBox1.Text = "";
                 metroTextBox2.Text = "";
+                metroTextBox3.Text = "";
             }
         }
 
         private void btn_delete_Click(object sender, EventArgs e)
         {
-            if ((metroTextBox1.Text == "") || (metroTextBox2.Text == ""))
+            if ((metroTextBox1.Text == "") || (metroTextBox2.Text == "") || (metroTextBox3.Text == ""))
             {
                 MessageBox.Show("Veuillez remplir les champs", "Champ(s)vide", MessageBoxButtons.OK, MessageBoxIcon.Stop);
 

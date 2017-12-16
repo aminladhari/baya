@@ -15,6 +15,7 @@ namespace baya
         Chargementfichier y = new Chargementfichier();
         Chargementfichier z = new Chargementfichier();
         Decimal somme;
+       
         public Acceuil()
         {
             InitializeComponent();
@@ -258,7 +259,8 @@ namespace baya
                     Connexion.cmd.ExecuteNonQuery();
                     Connexion.cnx.Close();
                     Connexion.cnx.Open();
-                    Connexion.cmd.CommandText = "insert into detail_commande(type,metrage,epaisseur,designation,quantite,prix,prix_tt,cin)values('" + type.Text.ToString() + "','" + txtbox_metrage.Text.ToString() + "','" + combo_epai.Text.ToString() + "','" + libele.Text.ToString() + "','" + textBox1.Text.ToString() + "','" + prix_produit.Text.ToString() + "','" + total_article.Text.ToString() + "','" + cin.Text.ToString() + "')";
+                    String npr = nom.Text.ToString() + " " + prenom.Text.ToString();
+                    Connexion.cmd.CommandText = "insert into detail_commande(type,metrage,epaisseur,designation,quantite,prix,prix_tt,cin,nom_prenom)values('" + type.Text.ToString() + "','" + txtbox_metrage.Text.ToString() + "','" + combo_epai.Text.ToString() + "','" + libele.Text.ToString() + "','" + textBox1.Text.ToString() + "','" + prix_produit.Text.ToString() + "','" + total_article.Text.ToString() + "','" + cin.Text.ToString() + "','" + npr + "')";
                     Connexion.cmd.ExecuteNonQuery();
 
                     //chargement de datagridview
@@ -396,7 +398,7 @@ namespace baya
                     Connexion.cnx.Close();
                     Connexion.cnx.Open();
                     String npr = nom.Text.ToString() + " " + prenom.Text.ToString();
-                    Connexion.cmd.CommandText = "insert into commande(tva,totale_htva,totale_tva,totoale_ttc,date,nom_premnom,cin)values('" + tva.Text.ToString() + "','" + txt_montant_htva.Text.ToString() + "','" + txt_montant_tva.Text.ToString() + "','" + txt_montant_total.Text.ToString() + "','" + metroDateTime1.Text.ToString() + "','"+ npr +"','" + cin.Text.ToString() + "')";
+                    Connexion.cmd.CommandText = "insert into commande(tva,totale_htva,totale_tva,totoale_ttc,date,nom_prenom,cin)values('" + tva.Text.ToString() + "','" + txt_montant_htva.Text.ToString() + "','" + txt_montant_tva.Text.ToString() + "','" + txt_montant_total.Text.ToString() + "','" + metroDateTime1.Text.ToString() + "','"+ npr +"','" + cin.Text.ToString() + "')";
                     Connexion.cmd.ExecuteNonQuery();
 
                    
@@ -458,7 +460,9 @@ namespace baya
 
         private void détailsCommandeParClientToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            Detail ac = new Detail();
+            ac.Show();
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)

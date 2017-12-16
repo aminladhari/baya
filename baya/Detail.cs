@@ -12,37 +12,44 @@ using System.Windows.Forms;
 
 namespace baya
 {
-    public partial class Commande : MetroForm
+    public partial class Detail : MetroForm
     {
-        public Commande()
+        public Detail()
         {
             InitializeComponent();
         }
 
-        private void Commande_Load(object sender, EventArgs e)
+        private void Detail_Load(object sender, EventArgs e)
         {
             chargementgrid();
         }
-
-              private void chargementgrid()
+        private void chargementgrid()
         {
             //chargement de datagridview
 
-            Connexion.cmd.CommandText = "Select nom_prenom,cin,totale_htva,tva,totale_tva,totoale_ttc,date from commande ";
+            Connexion.cmd.CommandText = "Select * from detail_commande ";
             MySqlDataAdapter da = new MySqlDataAdapter(Connexion.cmd);
             DataSet ds = new DataSet();
-            da.Fill(ds, "commande");
+            da.Fill(ds, "detail_commande");
             System.Data.DataTable dt = new System.Data.DataTable();
-            dt = ds.Tables["commande"];
-            dataGridView2.DataSource = dt;
+            dt = ds.Tables["detail_commande"];
+            dataGridView1.DataSource = dt;
             Connexion.cnx.Close();
 
         }
 
-        private void acceuilToolStripMenuItem_Click(object sender, EventArgs e)
+        private void toutesLesCommandesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Acceuil ac = new Acceuil();
+            Commande ac = new Commande();
+            ac.Show();
+
+        }
+
+        private void détailsCommandeParClientToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Detail ac = new Detail();
             ac.Show();
         }
 
@@ -72,20 +79,11 @@ namespace baya
             Application.Exit();
         }
 
-        private void toutesLesCommandesToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-            this.Hide();
-            Commande ac = new Commande();
-            ac.Show();
-        }
-
-        private void détailsCommandeParClientToolStripMenuItem_Click(object sender, EventArgs e)
+        private void acceuilToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Detail ac = new Detail();
+            Acceuil ac = new Acceuil();
             ac.Show();
         }
     }
-    
 }

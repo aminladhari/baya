@@ -143,6 +143,7 @@
             this.détailsCommandeParClientToolStripMenuItem.Name = "détailsCommandeParClientToolStripMenuItem";
             this.détailsCommandeParClientToolStripMenuItem.Size = new System.Drawing.Size(225, 22);
             this.détailsCommandeParClientToolStripMenuItem.Text = "Détails commande par client";
+            this.détailsCommandeParClientToolStripMenuItem.Click += new System.EventHandler(this.détailsCommandeParClientToolStripMenuItem_Click);
             // 
             // metroButton1
             // 
@@ -350,6 +351,7 @@
             this.Controls.Add(this.metroTextBox1);
             this.Controls.Add(this.menuStrip1);
             this.Name = "Granit";
+            this.Resizable = false;
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Text = "Granit";
             this.TextAlign = MetroFramework.Forms.MetroFormTextAlign.Center;

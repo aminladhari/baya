@@ -18,3 +18,4 @@ C:\Users\Amine\Desktop\baya\baya\obj\Debug\baya.client.resources
 C:\Users\Amine\Desktop\baya\baya\obj\Debug\baya.Granit.resources
 C:\Users\Amine\Desktop\baya\baya\obj\Debug\baya.Marbre.resources
 C:\Users\Amine\Desktop\baya\baya\obj\Debug\baya.Commande.resources
+C:\Users\Amine\Desktop\baya\baya\obj\Debug\baya.Detail.resources

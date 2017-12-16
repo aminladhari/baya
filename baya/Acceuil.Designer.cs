@@ -1006,6 +1006,7 @@ namespace baya
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Acceuil";
+            this.Resizable = false;
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Text = "Acceuil";
             this.TextAlign = MetroFramework.Forms.MetroFormTextAlign.Center;

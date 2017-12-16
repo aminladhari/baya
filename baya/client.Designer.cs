@@ -48,11 +48,11 @@
             this.gestionMarbreToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.quiterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.metroButton1 = new MetroFramework.Controls.MetroButton();
-            this.id = new System.Windows.Forms.TextBox();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toutesLesCommandesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.détailsCommandeParClientToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.metroButton1 = new MetroFramework.Controls.MetroButton();
+            this.id = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -324,24 +324,6 @@
             this.quiterToolStripMenuItem.Text = "Quiter";
             this.quiterToolStripMenuItem.Click += new System.EventHandler(this.quiterToolStripMenuItem_Click);
             // 
-            // metroButton1
-            // 
-            this.metroButton1.Location = new System.Drawing.Point(555, 235);
-            this.metroButton1.Name = "metroButton1";
-            this.metroButton1.Size = new System.Drawing.Size(119, 23);
-            this.metroButton1.TabIndex = 13;
-            this.metroButton1.Text = "Vider les champs";
-            this.metroButton1.UseSelectable = true;
-            this.metroButton1.Click += new System.EventHandler(this.metroButton1_Click);
-            // 
-            // id
-            // 
-            this.id.Location = new System.Drawing.Point(659, 93);
-            this.id.Name = "id";
-            this.id.Size = new System.Drawing.Size(53, 20);
-            this.id.TabIndex = 24;
-            this.id.Visible = false;
-            // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -363,6 +345,25 @@
             this.détailsCommandeParClientToolStripMenuItem.Name = "détailsCommandeParClientToolStripMenuItem";
             this.détailsCommandeParClientToolStripMenuItem.Size = new System.Drawing.Size(225, 22);
             this.détailsCommandeParClientToolStripMenuItem.Text = "Détails commande par client";
+            this.détailsCommandeParClientToolStripMenuItem.Click += new System.EventHandler(this.détailsCommandeParClientToolStripMenuItem_Click);
+            // 
+            // metroButton1
+            // 
+            this.metroButton1.Location = new System.Drawing.Point(555, 235);
+            this.metroButton1.Name = "metroButton1";
+            this.metroButton1.Size = new System.Drawing.Size(119, 23);
+            this.metroButton1.TabIndex = 13;
+            this.metroButton1.Text = "Vider les champs";
+            this.metroButton1.UseSelectable = true;
+            this.metroButton1.Click += new System.EventHandler(this.metroButton1_Click);
+            // 
+            // id
+            // 
+            this.id.Location = new System.Drawing.Point(659, 93);
+            this.id.Name = "id";
+            this.id.Size = new System.Drawing.Size(53, 20);
+            this.id.TabIndex = 24;
+            this.id.Visible = false;
             // 
             // client
             // 
@@ -385,6 +386,7 @@
             this.Controls.Add(this.metroTextBox2);
             this.Controls.Add(this.metroTextBox1);
             this.Name = "client";
+            this.Resizable = false;
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Text = "Gestion des clients";
             this.TextAlign = MetroFramework.Forms.MetroFormTextAlign.Center;

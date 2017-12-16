@@ -62,6 +62,7 @@
             this.Controls.Add(this.metroLabel1);
             this.Controls.Add(this.metroProgressBar1);
             this.Name = "Chargement";
+            this.Resizable = false;
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Text = "Chargement";
             this.TextAlign = MetroFramework.Forms.MetroFormTextAlign.Center;

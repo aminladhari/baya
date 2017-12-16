@@ -268,5 +268,12 @@ namespace baya
             Commande ac = new Commande();
             ac.Show();
         }
+
+        private void détailsCommandeParClientToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Detail ac = new Detail();
+            ac.Show();
+        }
     }
 }

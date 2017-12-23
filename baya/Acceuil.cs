@@ -1,5 +1,6 @@
 ﻿using MetroFramework;
 using MetroFramework.Forms;
+using Microsoft.Office.Interop.Excel;
 using MySql.Data.MySqlClient;
 using System;
 using System.Data;
@@ -142,7 +143,7 @@ namespace baya
 
         private void quiterToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            System.Windows.Forms.Application.Exit();
         }
 
         private void gestionDesClientsToolStripMenuItem_Click(object sender, EventArgs e)
@@ -268,7 +269,7 @@ namespace baya
                     MySqlDataAdapter da = new MySqlDataAdapter(Connexion.cmd);
                     DataSet ds = new DataSet();
                     da.Fill(ds, "details");
-                    DataTable dt = new DataTable();
+                    System.Data.DataTable dt = new System.Data.DataTable();
                     dt = ds.Tables["details"];
                     dataGridView3.DataSource = dt;
 
@@ -468,6 +469,40 @@ namespace baya
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
             total_article.Text = (float.Parse(txtbox_metrage.Text.ToString()) * float.Parse(prix_produit.Text.ToString()) * float.Parse(textBox1.Text.ToString())).ToString("#.##");
+        }
+
+        private void btn_imprimer_Click(object sender, EventArgs e)
+        {
+            Microsoft.Office.Interop.Excel.Application xla = new Microsoft.Office.Interop.Excel.Application();
+            xla.Visible = true;
+            Workbook wb = xla.Workbooks.Open("D:/gcc/gcc/bon_achat.xlsx");
+            Worksheet ws = (Worksheet)xla.ActiveSheet;
+
+            ws.Cells[10, 3] = metroDateTime1.Value.ToString("yyyy-mm-dd");
+           ws.Cells[11, 3] = cin.Text.ToString() + " - " + nom.Text.ToString() + " " + prenom.Text.ToString();
+            //ws.Cells[8, 6] = txt_num_ba.Text.ToString();
+
+            for (int i = 0; i < dataGridView3.Rows.Count - 1; i++)
+            {
+
+                ws.Cells[i + 16, 5] = dataGridView3.Rows[i].Cells[6].Value.ToString();
+                ws.Cells[i + 16, 6] = dataGridView3.Rows[i].Cells[5].Value.ToString();
+                ws.Cells[i + 16, 7] = dataGridView3.Rows[i].Cells[7].Value.ToString();
+                ws.Cells[i + 16, 1] = dataGridView3.Rows[i].Cells[1].Value.ToString();
+                ws.Cells[i + 16, 2] = dataGridView3.Rows[i].Cells[4].Value.ToString();
+
+
+
+                //net a payer
+                //ws.Cells[31, 6] = txt_frais.Text.ToString();
+                ws.Cells[32, 6] = txt_montant_htva.Text.ToString();
+                ws.Cells[33, 6] = txt_montant_tva.Text.ToString();
+                //ws.Cells[34, 6] = txt_remise.Text.ToString();
+                ws.Cells[35, 6] = txt_montant_total.Text.ToString();
+
+            }
+            // lancement de l'impression par default:
+            ws.PrintOut(Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing);
         }
     }
 }

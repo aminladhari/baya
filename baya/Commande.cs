@@ -86,6 +86,13 @@ namespace baya
             Detail ac = new Detail();
             ac.Show();
         }
+
+        private void acceuilToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            Acceuil ac = new Acceuil();
+            ac.Show();
+        }
     }
     
 }

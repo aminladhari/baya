@@ -40,9 +40,7 @@ namespace baya
 
 		private void acceuilToolStripMenuItem_Click(object sender, EventArgs e)
 		{
-			this.Hide();
-			Acceuil ac = new Acceuil();
-			ac.Show();
+			
 		}
 
 		private void btn_update_Click(object sender, EventArgs e)
@@ -265,5 +263,12 @@ namespace baya
 			Detail ac = new Detail();
 			ac.Show();
 		}
-	}
+
+        private void acceuilToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Acceuil ac = new Acceuil();
+            ac.Show();
+        }
+    }
 }

@@ -306,23 +306,31 @@ namespace baya
 
         private void btn_supprimer_Click(object sender, EventArgs e)
         {
-            Connexion.cnx.Close();
-            Connexion.cnx.Open();
-            DialogResult reponse;
-            reponse = MessageBox.Show("êtes_vous_sûr de supprimer l'article ?", "Confirmer la Suppression", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
-            //code si oui confirmer la suppression
-            if (reponse == System.Windows.Forms.DialogResult.Yes)
+            if(id_details.Text=="")
             {
-                Connexion.cmd.CommandText = "delete from details   where id_dc='" + id_details.Text.ToString() + "'";
-                Connexion.cmd.ExecuteNonQuery();
-                txtbox_metrage.Text = "";
-                libele.Text = "";
-                prix_produit.Text = "";
-                total_article.Text = "";
-
-
-                chargementdetail();
+                MessageBox.Show("Il faut ajouter une commande ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            else
+            {
+                Connexion.cnx.Close();
+                Connexion.cnx.Open();
+                DialogResult reponse;
+                reponse = MessageBox.Show("êtes_vous_sûr de supprimer l'article ?", "Confirmer la Suppression", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                //code si oui confirmer la suppression
+                if (reponse == System.Windows.Forms.DialogResult.Yes)
+                {
+                    Connexion.cmd.CommandText = "delete from details   where id_dc='" + id_details.Text.ToString() + "'";
+                    Connexion.cmd.ExecuteNonQuery();
+                    txtbox_metrage.Text = "";
+                    libele.Text = "";
+                    prix_produit.Text = "";
+                    total_article.Text = "";
+
+
+                    chargementdetail();
+                }
+            }
+           
         }
 
         private void dataGridView3_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -474,6 +482,7 @@ namespace baya
         private void btn_imprimer_Click(object sender, EventArgs e)
         {
             Microsoft.Office.Interop.Excel.Application xla = new Microsoft.Office.Interop.Excel.Application();
+
             xla.Visible = true;
             Workbook wb = xla.Workbooks.Open("D:/gcc/gcc/bon_achat.xlsx");
             Worksheet ws = (Worksheet)xla.ActiveSheet;

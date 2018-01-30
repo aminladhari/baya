@@ -30,8 +30,8 @@
         {
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.acceuilToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestionMarbreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.acceuilToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestionGranitToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.gestionMarbreToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.gestionDesClientsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -40,6 +40,7 @@
             this.suiviCommandeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toutesLesCommandesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.détailsCommandeParClientToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -59,7 +60,6 @@
             // 
             this.menuStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Visible;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.acceuilToolStripMenuItem,
             this.gestionMarbreToolStripMenuItem,
             this.suiviCommandeToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(20, 60);
@@ -69,16 +69,11 @@
             this.menuStrip1.TabIndex = 15;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // acceuilToolStripMenuItem
-            // 
-            this.acceuilToolStripMenuItem.Name = "acceuilToolStripMenuItem";
-            this.acceuilToolStripMenuItem.Size = new System.Drawing.Size(58, 20);
-            this.acceuilToolStripMenuItem.Text = "Acceuil";
-            this.acceuilToolStripMenuItem.Click += new System.EventHandler(this.acceuilToolStripMenuItem_Click);
-            // 
             // gestionMarbreToolStripMenuItem
             // 
             this.gestionMarbreToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.acceuilToolStripMenuItem,
+            this.toolStripSeparator2,
             this.gestionGranitToolStripMenuItem1,
             this.gestionMarbreToolStripMenuItem1,
             this.gestionDesClientsToolStripMenuItem,
@@ -87,6 +82,13 @@
             this.gestionMarbreToolStripMenuItem.Name = "gestionMarbreToolStripMenuItem";
             this.gestionMarbreToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
             this.gestionMarbreToolStripMenuItem.Text = "Menu";
+            // 
+            // acceuilToolStripMenuItem
+            // 
+            this.acceuilToolStripMenuItem.Name = "acceuilToolStripMenuItem";
+            this.acceuilToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.acceuilToolStripMenuItem.Text = "Acceuil";
+            this.acceuilToolStripMenuItem.Click += new System.EventHandler(this.acceuilToolStripMenuItem_Click_1);
             // 
             // gestionGranitToolStripMenuItem1
             // 
@@ -144,6 +146,11 @@
             this.détailsCommandeParClientToolStripMenuItem.Text = "Détails commande par client";
             this.détailsCommandeParClientToolStripMenuItem.Click += new System.EventHandler(this.détailsCommandeParClientToolStripMenuItem_Click);
             // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(169, 6);
+            // 
             // Commande
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -169,7 +176,6 @@
 
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem acceuilToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gestionMarbreToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gestionGranitToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem gestionMarbreToolStripMenuItem1;
@@ -179,5 +185,7 @@
         private System.Windows.Forms.ToolStripMenuItem suiviCommandeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem toutesLesCommandesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem détailsCommandeParClientToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem acceuilToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
     }
 }

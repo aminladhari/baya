@@ -42,8 +42,8 @@
             this.btn_update = new MetroFramework.Controls.MetroButton();
             this.btn_delete = new MetroFramework.Controls.MetroButton();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.acceuilToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestionMarbreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.acceuilToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.gestionGranitToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.gestionMarbreToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
@@ -53,6 +53,7 @@
             this.détailsCommandeParClientToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.metroButton1 = new MetroFramework.Controls.MetroButton();
             this.id = new System.Windows.Forms.TextBox();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -270,7 +271,6 @@
             // 
             this.menuStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Visible;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.acceuilToolStripMenuItem,
             this.gestionMarbreToolStripMenuItem,
             this.toolStripMenuItem1});
             this.menuStrip1.Location = new System.Drawing.Point(20, 60);
@@ -280,16 +280,11 @@
             this.menuStrip1.TabIndex = 12;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // acceuilToolStripMenuItem
-            // 
-            this.acceuilToolStripMenuItem.Name = "acceuilToolStripMenuItem";
-            this.acceuilToolStripMenuItem.Size = new System.Drawing.Size(58, 20);
-            this.acceuilToolStripMenuItem.Text = "Acceuil";
-            this.acceuilToolStripMenuItem.Click += new System.EventHandler(this.acceuilToolStripMenuItem_Click);
-            // 
             // gestionMarbreToolStripMenuItem
             // 
             this.gestionMarbreToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.acceuilToolStripMenuItem1,
+            this.toolStripSeparator2,
             this.gestionGranitToolStripMenuItem1,
             this.gestionMarbreToolStripMenuItem1,
             this.toolStripSeparator1,
@@ -297,6 +292,13 @@
             this.gestionMarbreToolStripMenuItem.Name = "gestionMarbreToolStripMenuItem";
             this.gestionMarbreToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
             this.gestionMarbreToolStripMenuItem.Text = "Menu";
+            // 
+            // acceuilToolStripMenuItem1
+            // 
+            this.acceuilToolStripMenuItem1.Name = "acceuilToolStripMenuItem1";
+            this.acceuilToolStripMenuItem1.Size = new System.Drawing.Size(155, 22);
+            this.acceuilToolStripMenuItem1.Text = "Acceuil";
+            this.acceuilToolStripMenuItem1.Click += new System.EventHandler(this.acceuilToolStripMenuItem1_Click);
             // 
             // gestionGranitToolStripMenuItem1
             // 
@@ -365,6 +367,11 @@
             this.id.TabIndex = 24;
             this.id.Visible = false;
             // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(152, 6);
+            // 
             // client
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -419,11 +426,12 @@
         private System.Windows.Forms.ToolStripMenuItem gestionMarbreToolStripMenuItem1;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripMenuItem quiterToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem acceuilToolStripMenuItem;
         private MetroFramework.Controls.MetroButton metroButton1;
         private System.Windows.Forms.TextBox id;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem toutesLesCommandesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem détailsCommandeParClientToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem acceuilToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
     }
 }

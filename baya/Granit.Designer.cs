@@ -30,13 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Granit));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.acceuilToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestionMarbreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestionGranitToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.gestionMarbreToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.gestionDesClientsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.quiterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.acceuilToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.suiviCommandeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toutesLesCommandesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.détailsCommandeParClientToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -52,6 +52,7 @@
             this.id = new System.Windows.Forms.TextBox();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.metroTextBox3 = new MetroFramework.Controls.MetroTextBox();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -60,7 +61,6 @@
             // 
             this.menuStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Visible;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.acceuilToolStripMenuItem,
             this.gestionMarbreToolStripMenuItem,
             this.suiviCommandeToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(20, 60);
@@ -70,16 +70,11 @@
             this.menuStrip1.TabIndex = 13;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // acceuilToolStripMenuItem
-            // 
-            this.acceuilToolStripMenuItem.Name = "acceuilToolStripMenuItem";
-            this.acceuilToolStripMenuItem.Size = new System.Drawing.Size(58, 20);
-            this.acceuilToolStripMenuItem.Text = "Acceuil";
-            this.acceuilToolStripMenuItem.Click += new System.EventHandler(this.acceuilToolStripMenuItem_Click);
-            // 
             // gestionMarbreToolStripMenuItem
             // 
             this.gestionMarbreToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.acceuilToolStripMenuItem,
+            this.toolStripSeparator2,
             this.gestionGranitToolStripMenuItem1,
             this.gestionMarbreToolStripMenuItem1,
             this.gestionDesClientsToolStripMenuItem,
@@ -121,6 +116,13 @@
             this.quiterToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
             this.quiterToolStripMenuItem.Text = "Quiter";
             this.quiterToolStripMenuItem.Click += new System.EventHandler(this.quiterToolStripMenuItem_Click);
+            // 
+            // acceuilToolStripMenuItem
+            // 
+            this.acceuilToolStripMenuItem.Name = "acceuilToolStripMenuItem";
+            this.acceuilToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.acceuilToolStripMenuItem.Text = "Acceuil";
+            this.acceuilToolStripMenuItem.Click += new System.EventHandler(this.acceuilToolStripMenuItem_Click_1);
             // 
             // suiviCommandeToolStripMenuItem
             // 
@@ -332,6 +334,11 @@
             this.metroTextBox3.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.metroTextBox3.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(169, 6);
+            // 
             // Granit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -367,7 +374,6 @@
         #endregion
 
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem acceuilToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gestionMarbreToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gestionGranitToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem gestionMarbreToolStripMenuItem1;
@@ -389,5 +395,7 @@
         private System.Windows.Forms.ToolStripMenuItem détailsCommandeParClientToolStripMenuItem;
         private MetroFramework.Controls.MetroLabel metroLabel3;
         private MetroFramework.Controls.MetroTextBox metroTextBox3;
+        private System.Windows.Forms.ToolStripMenuItem acceuilToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
     }
 }

@@ -83,6 +83,8 @@ namespace baya
             id.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
             metroTextBox1.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
             metroTextBox2.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+            metroTextBox3.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
+
         }
 
         private void btn_add_Click(object sender, EventArgs e)
@@ -150,6 +152,7 @@ namespace baya
 
                         metroTextBox1.Text = "";
                         metroTextBox2.Text = "";
+                        metroTextBox3.Text = "";
 
 
                         MessageBox.Show("Type Ajouté(e) avec succé", "Ajout produit", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -245,6 +248,13 @@ namespace baya
         {
             this.Hide();
             Detail ac = new Detail();
+            ac.Show();
+        }
+
+        private void acceuilToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            Acceuil ac = new Acceuil();
             ac.Show();
         }
     }

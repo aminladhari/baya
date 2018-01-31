@@ -92,6 +92,7 @@ namespace baya
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.button3 = new System.Windows.Forms.Button();
             this.id_details = new System.Windows.Forms.TextBox();
+            this.numfac = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -481,6 +482,7 @@ namespace baya
             this.groupBox3.TabIndex = 8;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Client";
+            this.groupBox3.Enter += new System.EventHandler(this.groupBox3_Enter);
             // 
             // rech_ref
             // 
@@ -931,6 +933,7 @@ namespace baya
             this.button1.Text = "  Imprimer Facture";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // button2
             // 
@@ -990,6 +993,15 @@ namespace baya
             this.id_details.TabIndex = 113;
             this.id_details.Visible = false;
             // 
+            // numfac
+            // 
+            this.numfac.Enabled = false;
+            this.numfac.Location = new System.Drawing.Point(111, 518);
+            this.numfac.Name = "numfac";
+            this.numfac.Size = new System.Drawing.Size(57, 20);
+            this.numfac.TabIndex = 114;
+            this.numfac.Visible = false;
+            // 
             // Acceuil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -998,6 +1010,7 @@ namespace baya
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(1004, 949);
+            this.Controls.Add(this.numfac);
             this.Controls.Add(this.id_details);
             this.Controls.Add(this.groupBox6);
             this.Controls.Add(this.groupBox5);
@@ -1098,5 +1111,6 @@ namespace baya
         private System.Windows.Forms.ToolStripMenuItem toutesLesCommandesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem détailsCommandeParClientToolStripMenuItem;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox numfac;
     }
 }

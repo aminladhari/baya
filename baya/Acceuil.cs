@@ -28,6 +28,23 @@ namespace baya
 
         private void Acceuil_Load(object sender, EventArgs e)
         {
+            //code numero facture
+            Connexion.cnx.Open();
+            Connexion.cmd.CommandText = "select * from commande order by id desc";
+            // data reader pour lire 
+            MySqlDataReader lire = Connexion.cmd.ExecuteReader();
+            if (lire.Read() == true)
+            {
+
+                numfac.Text = (int.Parse(lire[0].ToString()) + 1).ToString();
+            }
+            else
+            {
+                numfac.Text = "1";
+
+            }
+            lire.Close();
+            Connexion.cnx.Close();
             //x.ChargementComboBox("select valeur from tva",combo_tva);
             y.ChargementComboBox("select valeur from epaisseur", combo_epai);
             z.ChargementComboBox("select type from typemarbre", type);
@@ -425,15 +442,8 @@ namespace baya
                     Connexion.cmd.CommandText = "delete from details   where cin='" + cin.Text.ToString() + "'";
                     Connexion.cmd.ExecuteNonQuery();
                     Connexion.cnx.Close();
-                    nom.Text = "";
-                    prenom.Text = "";
-                    cin.Text = "";
-                    adresse.Text = "";
-                    tva.Text = "";
-                    txt_montant_htva.Text = "";
-                    txt_montant_tva.Text = "";
-                    txt_montant_total.Text = "";
-                    chargementdetail();
+                   
+                    
 
 
                 }
@@ -484,34 +494,47 @@ namespace baya
             Microsoft.Office.Interop.Excel.Application xla = new Microsoft.Office.Interop.Excel.Application();
 
             xla.Visible = true;
-            Workbook wb = xla.Workbooks.Open("D:/gcc/gcc/bon_achat.xlsx");
+            Workbook wb = xla.Workbooks.Open("D:/baya/devis.xlsx");
             Worksheet ws = (Worksheet)xla.ActiveSheet;
-
-            ws.Cells[10, 3] = metroDateTime1.Value.ToString("yyyy-mm-dd");
-           ws.Cells[11, 3] = cin.Text.ToString() + " - " + nom.Text.ToString() + " " + prenom.Text.ToString();
-            //ws.Cells[8, 6] = txt_num_ba.Text.ToString();
+            ws.Cells[8, 6] = numfac.Text.ToString();
+            ws.Cells[10, 3] = metroDateTime1.Value.ToString();
+            ws.Cells[11, 3] = cin.Text.ToString() + " - " + nom.Text.ToString() + " " + prenom.Text.ToString();
+           
 
             for (int i = 0; i < dataGridView3.Rows.Count - 1; i++)
             {
 
+               
+                ws.Cells[i + 16, 1] = dataGridView3.Rows[i].Cells[1].Value.ToString();
+                ws.Cells[i + 16, 2] = dataGridView3.Rows[i].Cells[4].Value.ToString();
+                ws.Cells[i + 16, 3] = dataGridView3.Rows[i].Cells[2].Value.ToString();
+                ws.Cells[i + 16, 4] = dataGridView3.Rows[i].Cells[3].Value.ToString();
                 ws.Cells[i + 16, 5] = dataGridView3.Rows[i].Cells[6].Value.ToString();
                 ws.Cells[i + 16, 6] = dataGridView3.Rows[i].Cells[5].Value.ToString();
                 ws.Cells[i + 16, 7] = dataGridView3.Rows[i].Cells[7].Value.ToString();
-                ws.Cells[i + 16, 1] = dataGridView3.Rows[i].Cells[1].Value.ToString();
-                ws.Cells[i + 16, 2] = dataGridView3.Rows[i].Cells[4].Value.ToString();
 
 
 
                 //net a payer
-                //ws.Cells[31, 6] = txt_frais.Text.ToString();
-                ws.Cells[32, 6] = txt_montant_htva.Text.ToString();
-                ws.Cells[33, 6] = txt_montant_tva.Text.ToString();
-                //ws.Cells[34, 6] = txt_remise.Text.ToString();
-                ws.Cells[35, 6] = txt_montant_total.Text.ToString();
+               
+                ws.Cells[30, 6] = txt_montant_htva.Text.ToString();
+                ws.Cells[31, 6] = txt_montant_tva.Text.ToString();
+                ws.Cells[32, 6] = txt_montant_total.Text.ToString();
 
             }
+            chargementdetail();
             // lancement de l'impression par default:
             ws.PrintOut(Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing);
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox3_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

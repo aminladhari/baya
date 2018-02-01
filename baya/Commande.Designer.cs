@@ -32,6 +32,7 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.gestionMarbreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.acceuilToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.gestionGranitToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.gestionMarbreToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.gestionDesClientsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -40,7 +41,6 @@
             this.suiviCommandeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toutesLesCommandesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.détailsCommandeParClientToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -53,7 +53,7 @@
             this.dataGridView2.Location = new System.Drawing.Point(9, 98);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.ReadOnly = true;
-            this.dataGridView2.Size = new System.Drawing.Size(732, 465);
+            this.dataGridView2.Size = new System.Drawing.Size(966, 479);
             this.dataGridView2.TabIndex = 1;
             // 
             // menuStrip1
@@ -65,7 +65,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(20, 60);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.menuStrip1.Size = new System.Drawing.Size(721, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(958, 24);
             this.menuStrip1.TabIndex = 15;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -89,6 +89,11 @@
             this.acceuilToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
             this.acceuilToolStripMenuItem.Text = "Acceuil";
             this.acceuilToolStripMenuItem.Click += new System.EventHandler(this.acceuilToolStripMenuItem_Click_1);
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(169, 6);
             // 
             // gestionGranitToolStripMenuItem1
             // 
@@ -146,16 +151,11 @@
             this.détailsCommandeParClientToolStripMenuItem.Text = "Détails commande par client";
             this.détailsCommandeParClientToolStripMenuItem.Click += new System.EventHandler(this.détailsCommandeParClientToolStripMenuItem_Click);
             // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(169, 6);
-            // 
             // Commande
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(761, 586);
+            this.ClientSize = new System.Drawing.Size(998, 615);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.dataGridView2);
             this.Name = "Commande";

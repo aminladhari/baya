@@ -31,12 +31,13 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Granit));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.gestionMarbreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.acceuilToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.gestionGranitToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.gestionMarbreToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.gestionDesClientsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.quiterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.acceuilToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.suiviCommandeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toutesLesCommandesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.détailsCommandeParClientToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -52,7 +53,6 @@
             this.id = new System.Windows.Forms.TextBox();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.metroTextBox3 = new MetroFramework.Controls.MetroTextBox();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -66,7 +66,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(20, 60);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.menuStrip1.Size = new System.Drawing.Size(749, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(871, 24);
             this.menuStrip1.TabIndex = 13;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -83,6 +83,18 @@
             this.gestionMarbreToolStripMenuItem.Name = "gestionMarbreToolStripMenuItem";
             this.gestionMarbreToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
             this.gestionMarbreToolStripMenuItem.Text = "Menu";
+            // 
+            // acceuilToolStripMenuItem
+            // 
+            this.acceuilToolStripMenuItem.Name = "acceuilToolStripMenuItem";
+            this.acceuilToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.acceuilToolStripMenuItem.Text = "Acceuil";
+            this.acceuilToolStripMenuItem.Click += new System.EventHandler(this.acceuilToolStripMenuItem_Click_1);
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(169, 6);
             // 
             // gestionGranitToolStripMenuItem1
             // 
@@ -116,13 +128,6 @@
             this.quiterToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
             this.quiterToolStripMenuItem.Text = "Quiter";
             this.quiterToolStripMenuItem.Click += new System.EventHandler(this.quiterToolStripMenuItem_Click);
-            // 
-            // acceuilToolStripMenuItem
-            // 
-            this.acceuilToolStripMenuItem.Name = "acceuilToolStripMenuItem";
-            this.acceuilToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
-            this.acceuilToolStripMenuItem.Text = "Acceuil";
-            this.acceuilToolStripMenuItem.Click += new System.EventHandler(this.acceuilToolStripMenuItem_Click_1);
             // 
             // suiviCommandeToolStripMenuItem
             // 
@@ -222,7 +227,7 @@
             this.dataGridView1.Location = new System.Drawing.Point(41, 281);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(707, 185);
+            this.dataGridView1.Size = new System.Drawing.Size(707, 309);
             this.dataGridView1.TabIndex = 16;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick_1);
             // 
@@ -334,16 +339,11 @@
             this.metroTextBox3.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.metroTextBox3.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(169, 6);
-            // 
             // Granit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(789, 489);
+            this.ClientSize = new System.Drawing.Size(911, 613);
             this.Controls.Add(this.metroLabel3);
             this.Controls.Add(this.metroTextBox3);
             this.Controls.Add(this.id);

@@ -38,8 +38,9 @@
             // 
             this.metroProgressBar1.Location = new System.Drawing.Point(140, 103);
             this.metroProgressBar1.Name = "metroProgressBar1";
-            this.metroProgressBar1.Size = new System.Drawing.Size(256, 23);
+            this.metroProgressBar1.Size = new System.Drawing.Size(507, 41);
             this.metroProgressBar1.TabIndex = 0;
+            this.metroProgressBar1.Click += new System.EventHandler(this.metroProgressBar1_Click);
             // 
             // timer1
             // 
@@ -48,7 +49,7 @@
             // metroLabel1
             // 
             this.metroLabel1.AutoSize = true;
-            this.metroLabel1.Location = new System.Drawing.Point(447, 233);
+            this.metroLabel1.Location = new System.Drawing.Point(669, 302);
             this.metroLabel1.Name = "metroLabel1";
             this.metroLabel1.Size = new System.Drawing.Size(75, 19);
             this.metroLabel1.TabIndex = 1;
@@ -58,7 +59,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(551, 261);
+            this.ClientSize = new System.Drawing.Size(797, 352);
             this.Controls.Add(this.metroLabel1);
             this.Controls.Add(this.metroProgressBar1);
             this.Name = "Chargement";

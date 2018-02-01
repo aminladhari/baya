@@ -32,6 +32,7 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.gestionMarbreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.acceuilToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.gestionGranitToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.gestionMarbreToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.gestionDesClientsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -42,7 +43,6 @@
             this.détailsCommandeParClientToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.metroTextBox1 = new MetroFramework.Controls.MetroTextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -55,7 +55,7 @@
             this.dataGridView1.Location = new System.Drawing.Point(23, 115);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(699, 400);
+            this.dataGridView1.Size = new System.Drawing.Size(894, 501);
             this.dataGridView1.TabIndex = 0;
             // 
             // menuStrip1
@@ -67,7 +67,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(20, 60);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.menuStrip1.Size = new System.Drawing.Size(705, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(913, 24);
             this.menuStrip1.TabIndex = 14;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -91,6 +91,11 @@
             this.acceuilToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
             this.acceuilToolStripMenuItem.Text = "Acceuil";
             this.acceuilToolStripMenuItem.Click += new System.EventHandler(this.acceuilToolStripMenuItem_Click_1);
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(169, 6);
             // 
             // gestionGranitToolStripMenuItem1
             // 
@@ -163,7 +168,7 @@
             this.metroTextBox1.CustomButton.UseSelectable = true;
             this.metroTextBox1.CustomButton.Visible = false;
             this.metroTextBox1.Lines = new string[0];
-            this.metroTextBox1.Location = new System.Drawing.Point(551, 87);
+            this.metroTextBox1.Location = new System.Drawing.Point(746, 90);
             this.metroTextBox1.MaxLength = 32767;
             this.metroTextBox1.Name = "metroTextBox1";
             this.metroTextBox1.PasswordChar = '\0';
@@ -183,22 +188,17 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(451, 90);
+            this.label1.Location = new System.Drawing.Point(635, 90);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(94, 20);
             this.label1.TabIndex = 111;
             this.label1.Text = "Nom Client :";
             // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(169, 6);
-            // 
             // Detail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(745, 547);
+            this.ClientSize = new System.Drawing.Size(953, 654);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.metroTextBox1);
             this.Controls.Add(this.menuStrip1);
